@@ -1,0 +1,22 @@
+export const SITE = {
+  name: "Zeller Kranservice",
+  legalName: "Zeller Kranservice, Inhaber Dirk Zeller",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://zeller-kranservice.de",
+  telefon: "02922 91 09 225",
+  telefonHref: "tel:+4929229109225",
+  email: "info@zeller-kranservice.de",
+  strasse: "Runtestraße 34",
+  plz: "59457",
+  ort: "Werl",
+  land: "DE",
+  ustId: "DE297076749",
+  inhaber: "Dirk Zeller",
+  buerozeiten: "Montag bis Freitag, 08:30 bis 15:00 Uhr",
+  gegruendet: 2014,
+  einsaetzeProJahr: "über 1.000",
+  rueckruf: "innerhalb von 24 Stunden",
+  stornoHinweis:
+    "Eine Stornierung muss spätestens 24 Stunden vor dem Termin erfolgen, sonst berechnen wir die gebuchten Kranstunden voll.",
+  provenExpert: "https://www.provenexpert.com/zeller-kranservice2/",
+  pvReinigung: "https://pv-anlagen-reinigung-zeller.de/",
+} as const;

@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+@theme {
+  /* Markenfarben der bestehenden Zeller-Seite */
+  --color-magenta: #e6007e; /* Akzent, Flächen */
+  --color-magenta-ink: #c8006e; /* Text & Buttons auf Weiß (Kontrast AA) */
+  --color-magenta-hover: #a8005c;
+  --color-bordeaux: #7a0043; /* dunkle Flächen */
+  --color-bordeaux-deep: #5a0032;
+  --color-graphit: #212428; /* Text, Footer */
+  --color-schiefer: #5b5f66; /* Sekundärtext */
+  --color-stein: #f4f4f5; /* ruhige Flächen */
+  --color-linie: #e2e2e6; /* Haarlinien */
+  --color-logo-gruen: #3db34a;
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+
+  --breakpoint-xs: 26rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  body {
+    background: #fff;
+    color: var(--color-graphit);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01" on;
+  }
+  h1,
+  h2,
+  h3,
+  .display {
+    font-stretch: 115%;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-magenta);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  ::selection {
+    background: var(--color-magenta);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .container-z {
+    width: 100%;
+    max-width: 78rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-z {
+      padding-inline: 2rem;
+    }
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    padding: 0.75rem 1.4rem;
+    font-weight: 600;
+    border-radius: 3px;
+    transition:
+      background-color 0.15s,
+      color 0.15s,
+      border-color 0.15s;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--color-magenta-ink);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: var(--color-magenta-hover);
+  }
+  .btn-secondary {
+    border: 1.5px solid var(--color-graphit);
+    color: var(--color-graphit);
+  }
+  .btn-secondary:hover {
+    background: var(--color-graphit);
+    color: #fff;
+  }
+  .btn-light {
+    background: #fff;
+    color: var(--color-bordeaux);
+  }
+  .btn-light:hover {
+    background: var(--color-stein);
+  }
+  .btn-outline-light {
+    border: 1.5px solid rgb(255 255 255 / 0.7);
+    color: #fff;
+  }
+  .btn-outline-light:hover {
+    background: rgb(255 255 255 / 0.1);
+  }
+
+  .link {
+    color: var(--color-magenta-ink);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .link:hover {
+    color: var(--color-magenta-hover);
+  }
+
+  /* Fließtext in Ratgeber & Rechtstexten */
+  .prose-z {
+    max-width: 44rem;
+    line-height: 1.7;
+    color: var(--color-graphit);
+  }
+  .prose-z h2 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  .prose-z h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .prose-z p {
+    margin-bottom: 1.1rem;
+  }
+  .prose-z ul {
+    list-style: none;
+    margin: 0 0 1.25rem;
+    padding: 0;
+  }
+  .prose-z ul li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .prose-z ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 0.6rem;
+    height: 2px;
+    background: var(--color-magenta);
+  }
+  .prose-z a {
+    color: var(--color-magenta-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .table-z {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  .table-z th,
+  .table-z td {
+    text-align: left;
+    padding: 0.8rem 1rem 0.8rem 0;
+    border-bottom: 1px solid var(--color-linie);
+    vertical-align: top;
+  }
+  .table-z thead th {
+    font-weight: 600;
+    color: var(--color-schiefer);
+    border-bottom: 1.5px solid var(--color-graphit);
+  }
+  .table-z tbody th {
+    font-weight: 500;
+    color: var(--color-schiefer);
+  }
+}
+
+/* Projekt-Slider: Scroll-Snap, ohne Scrollbar */
+.snap-row {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.snap-row::-webkit-scrollbar {
+  display: none;
+}
+.snap-row > * {
+  scroll-snap-align: start;
+}
