@@ -88,7 +88,7 @@ export default function Home() {
         <div className="container-z grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:gap-12 lg:py-20">
           <div className="lg:col-span-6 lg:pt-6">
             <p className="text-schiefer">Kranvermietung aus Werl, deutschlandweit im Einsatz</p>
-            <h1 className="mt-4 text-[2.6rem] font-bold leading-[1.02] sm:text-6xl lg:text-[4.4rem]">
+            <h1 className="mt-4 text-[2.6rem] font-bold leading-[1.02] sm:text-6xl lg:text-[3.4rem] xl:text-[4.4rem]">
               Kran mieten. Mit Kranführer, Planung und Genehmigung.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-schiefer">
