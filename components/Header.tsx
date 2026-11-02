@@ -9,6 +9,7 @@ import { einsatzbereiche } from "@/data/einsatzbereiche";
 import { IMG } from "@/lib/images";
 import { SITE } from "@/lib/site";
 import { anfrageUrl, bereichUrl } from "@/lib/links";
+import { TelefonIcon } from "@/components/icons";
 
 type MegaId = "mietpark" | "bereiche";
 
@@ -248,7 +249,8 @@ export function Header() {
           </nav>
 
           <div className="ml-auto flex items-center gap-5">
-            <a href={SITE.telefonHref} className="hidden font-semibold hover:text-magenta-ink xl:block">
+            <a href={SITE.telefonHref} className="hidden font-semibold hover:text-magenta-ink xl:inline-flex items-center gap-2">
+              <TelefonIcon />
               {SITE.telefon}
             </a>
             <Link href={anfrageUrl({ quelle: "header" })} className="btn btn-primary hidden sm:inline-flex">
@@ -327,6 +329,7 @@ export function Header() {
                   Kran anfragen
                 </Link>
                 <a href={SITE.telefonHref} className="btn btn-secondary w-full">
+                  <TelefonIcon />
                   {SITE.telefon} anrufen
                 </a>
               </div>

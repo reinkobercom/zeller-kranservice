@@ -10,6 +10,7 @@ import { GeraetCard, ProjektCard } from "@/components/cards";
 import { Breadcrumbs, CtaBand, FaqList, JsonLd, SectionHead } from "@/components/ui";
 import { SITE } from "@/lib/site";
 import { anfrageUrl, artikelUrl, bereichUrl } from "@/lib/links";
+import { TelefonIcon } from "@/components/icons";
 
 
 export function generateStaticParams() {
@@ -55,6 +56,7 @@ export default async function Page({ params }: PageProps<"/einsatzbereiche/[bere
                 Kran für {b.name} anfragen
               </Link>
               <a href={SITE.telefonHref} className="btn btn-secondary">
+                <TelefonIcon />
                 {SITE.telefon}
               </a>
             </div>

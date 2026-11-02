@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/ui";
 import { SITE } from "@/lib/site";
+import { TelefonIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Impressum | Zeller Kranservice",
@@ -27,7 +28,7 @@ export default function Page() {
           </p>
           <h2>Kontakt</h2>
           <p>
-            Telefon: <a href={SITE.telefonHref}>{SITE.telefon}</a>
+            Telefon: <a href={SITE.telefonHref} className="inline-flex items-center gap-1.5"><TelefonIcon />{SITE.telefon}</a>
             <br />
             E-Mail: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
           </p>

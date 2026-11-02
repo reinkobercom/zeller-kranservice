@@ -1,5 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { HakenIcon, MailIcon, TelefonIcon } from "@/components/icons";
+import { Trustindex } from "@/components/Trustindex";
+import { IMG } from "@/lib/images";
 import type { Faq, KategorieSlug } from "@/lib/types";
 import { SITE } from "@/lib/site";
 import { anfrageUrl } from "@/lib/links";
@@ -132,19 +136,71 @@ export function CtaBand({
   geraet?: string;
   quelle?: string;
 }) {
+  const vorteile = [
+    "Unverbindlich und kostenlos",
+    `Rückruf ${SITE.rueckruf}`,
+    `Seit ${SITE.gegruendet}, ${SITE.einsaetzeProJahr} Einsätze im Jahr`,
+  ];
   return (
-    <section className="bg-bordeaux text-white">
-      <div className="container-z flex flex-col gap-8 py-20 md:flex-row md:items-end md:justify-between md:py-24">
-        <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold leading-tight md:text-[2.6rem]">{title}</h2>
-          <p className="mt-4 text-lg text-white/80">{text}</p>
+    <section className="bg-bordeaux text-white" aria-labelledby="cta-titel">
+      <div className="container-z grid gap-12 py-20 md:py-24 lg:grid-cols-12 lg:items-center lg:gap-16">
+        <div className="lg:col-span-7">
+          <h2 id="cta-titel" className="text-3xl font-bold leading-tight md:text-[2.6rem]">
+            {title}
+          </h2>
+          <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/80">{text}</p>
+          <ul className="mt-6 space-y-2.5">
+            {vorteile.map((v) => (
+              <li key={v} className="flex items-center gap-3">
+                <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white/15">
+                  <HakenIcon className="h-3.5 w-3.5" />
+                </span>
+                {v}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link href={anfrageUrl({ kranart, geraet, quelle })} className="btn btn-light">
+              Kran anfragen
+            </Link>
+            <a href={SITE.telefonHref} className="btn btn-outline-light">
+              <TelefonIcon />
+              {SITE.telefon}
+            </a>
+          </div>
+          <Trustindex art="button" className="mt-8 w-[21rem] max-w-full" minHoehe="3rem" />
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <Link href={anfrageUrl({ kranart, geraet, quelle })} className="btn btn-light">
-            Kran anfragen
-          </Link>
-          <a href={SITE.telefonHref} className="btn btn-outline-light">
+
+        <div className="rounded-2xl bg-white p-6 text-graphit shadow-[0_32px_64px_-32px_rgb(0_0_0/0.5)] md:p-8 lg:col-span-5">
+          <div className="flex items-center gap-5">
+            <Image
+              src={IMG.teamDirk}
+              alt="Dirk Zeller, Geschäftsführer von Zeller Kranservice"
+              width={192}
+              height={192}
+              className="h-24 w-24 shrink-0 rounded-full object-cover"
+            />
+            <p className="leading-snug">
+              <span className="block text-sm text-schiefer">Ihr Ansprechpartner</span>
+              <span className="block text-xl font-bold">Dirk Zeller</span>
+              <span className="block text-sm text-schiefer">Geschäftsführer und Kranführer</span>
+            </p>
+          </div>
+          <p className="mt-6 leading-relaxed text-schiefer">
+            Sie wissen noch nicht, welches Gerät passt? Kein Problem. Wir schauen uns Ihren Einsatz an und schlagen das
+            passende Gerät vor.
+          </p>
+          <a href={SITE.telefonHref} className="btn btn-primary mt-6 w-full">
+            <TelefonIcon />
             {SITE.telefon}
+          </a>
+          <p className="mt-3 text-center text-sm text-schiefer">{SITE.buerozeiten}</p>
+          <a
+            href={`mailto:${SITE.email}`}
+            className="mt-5 flex items-center justify-center gap-2 border-t border-linie pt-5 font-semibold hover:text-magenta-ink"
+          >
+            <MailIcon />
+            {SITE.email}
           </a>
         </div>
       </div>

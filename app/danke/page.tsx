@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { Trustindex } from "@/components/Trustindex";
+import { TelefonIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Anfrage gesendet | Zeller Kranservice",
@@ -19,7 +20,8 @@ export default function Page() {
         </p>
         <p className="mt-6 text-schiefer">
           Eilt es? Rufen Sie uns an:{" "}
-          <a href={SITE.telefonHref} className="link font-semibold">
+          <a href={SITE.telefonHref} className="inline-flex items-center gap-1.5 link font-semibold">
+            <TelefonIcon />
             {SITE.telefon}
           </a>{" "}
           ({SITE.buerozeiten})

@@ -8,6 +8,7 @@ import { kategorien } from "@/data/kategorien";
 import { geraete } from "@/data/geraete";
 import { IMG } from "@/lib/images";
 import { SITE } from "@/lib/site";
+import { TelefonIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Kran anfragen und Kontakt | Zeller Kranservice Werl",
@@ -73,6 +74,7 @@ export default function Page() {
               Wir melden uns {SITE.rueckruf} bei Ihnen. Eilt es? Dann rufen Sie einfach direkt an.
             </p>
             <a href={SITE.telefonHref} className="btn btn-primary mt-5 w-full">
+              <TelefonIcon />
               {SITE.telefon}
             </a>
             <p className="mt-3 text-center text-sm text-schiefer">{SITE.buerozeiten}</p>

@@ -11,6 +11,7 @@ import { Trustindex } from "@/components/Trustindex";
 import { Breadcrumbs, CtaBand, FaqList, JsonLd, SectionHead } from "@/components/ui";
 import { SITE } from "@/lib/site";
 import { anfrageUrl, bereichUrl, geraetUrl } from "@/lib/links";
+import { TelefonIcon } from "@/components/icons";
 
 
 export function generateStaticParams() {
@@ -113,6 +114,7 @@ export default async function Page({ params }: PageProps<"/[slug]/[geraet]">) {
                 {g.verfuegbar ? "Diesen Kran anfragen" : "Jetzt vormerken"}
               </Link>
               <a href={SITE.telefonHref} className="btn btn-secondary">
+                <TelefonIcon />
                 {SITE.telefon}
               </a>
             </div>

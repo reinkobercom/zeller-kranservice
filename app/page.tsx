@@ -15,6 +15,7 @@ import { IMG } from "@/lib/images";
 import { SITE } from "@/lib/site";
 import { anfrageUrl, bereichUrl, geraetUrl, stadtUrl } from "@/lib/links";
 import type { Faq } from "@/lib/types";
+import { TelefonIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Kran mieten mit Kranführer, deutschlandweit | Zeller Kranservice",
@@ -123,6 +124,7 @@ export default function Home() {
                 Kran anfragen
               </Link>
               <a href={SITE.telefonHref} className="btn btn-outline-light">
+                <TelefonIcon />
                 {SITE.telefon}
               </a>
             </div>
@@ -367,6 +369,7 @@ export default function Home() {
             </blockquote>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={SITE.telefonHref} className="btn btn-primary">
+                <TelefonIcon />
                 {SITE.telefon} anrufen
               </a>
               <Link href="/ueber-uns/" className="btn btn-secondary">
@@ -444,7 +447,8 @@ export default function Home() {
             <SectionHead id="faq-titel" title="Häufige Fragen" />
             <p className="mt-4 text-schiefer">
               Ihre Frage ist nicht dabei? Rufen Sie uns an:{" "}
-              <a href={SITE.telefonHref} className="link whitespace-nowrap font-semibold">
+              <a href={SITE.telefonHref} className="inline-flex items-center gap-1.5 link whitespace-nowrap font-semibold">
+                <TelefonIcon />
                 {SITE.telefon}
               </a>
             </p>

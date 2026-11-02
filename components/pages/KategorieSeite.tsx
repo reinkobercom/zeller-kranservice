@@ -10,6 +10,7 @@ import { Trustindex } from "@/components/Trustindex";
 import { Breadcrumbs, CtaBand, FaqList, JsonLd, SectionHead } from "@/components/ui";
 import { SITE } from "@/lib/site";
 import { anfrageUrl, artikelUrl, bereichUrl, geraetUrl } from "@/lib/links";
+import { TelefonIcon } from "@/components/icons";
 
 export function KategorieSeite({ k }: { k: Kategorie }) {
   const geraete = geraeteDerKategorie(k.slug);
@@ -36,6 +37,7 @@ export function KategorieSeite({ k }: { k: Kategorie }) {
                 {k.name} anfragen
               </Link>
               <a href={SITE.telefonHref} className="btn btn-secondary">
+                <TelefonIcon />
                 {SITE.telefon}
               </a>
             </div>

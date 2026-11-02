@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { SITE } from "@/lib/site";
 import { anfrageUrl } from "@/lib/links";
+import { TelefonIcon } from "@/components/icons";
 
 /** Mobile Leiste "Anrufen | Anfragen", erscheint ab 30 % Scrolltiefe. */
 export function StickyCta() {
@@ -29,7 +30,8 @@ export function StickyCta() {
       className={`fixed inset-x-0 bottom-0 z-30 grid grid-cols-2 gap-px border-t border-linie bg-linie transition-transform duration-200 md:hidden ${show ? "translate-y-0" : "translate-y-full"}`}
       aria-hidden={!show}
     >
-      <a href={SITE.telefonHref} className="flex h-14 items-center justify-center bg-white font-semibold" tabIndex={show ? 0 : -1}>
+      <a href={SITE.telefonHref} className="flex h-14 items-center justify-center bg-white font-semibold gap-2" tabIndex={show ? 0 : -1}>
+        <TelefonIcon />
         Anrufen
       </a>
       <Link

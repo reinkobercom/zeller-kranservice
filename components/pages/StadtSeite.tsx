@@ -11,6 +11,7 @@ import { Breadcrumbs, CtaBand, FaqList, JsonLd, SectionHead } from "@/components
 import { IMG } from "@/lib/images";
 import { SITE } from "@/lib/site";
 import { anfrageUrl, bereichUrl, stadtUrl } from "@/lib/links";
+import { TelefonIcon } from "@/components/icons";
 
 export function StadtSeite({ s }: { s: Stadt }) {
   const quelle = `stadt-${s.slug}`;
@@ -42,6 +43,7 @@ export function StadtSeite({ s }: { s: Stadt }) {
                 Kran in {s.name} anfragen
               </Link>
               <a href={SITE.telefonHref} className="btn btn-secondary">
+                <TelefonIcon />
                 {SITE.telefon}
               </a>
             </div>

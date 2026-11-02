@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SITE } from "@/lib/site";
+import { TelefonIcon } from "@/components/icons";
 
 export default function NotFound() {
   return (
@@ -9,7 +10,7 @@ export default function NotFound() {
         <h1 className="mt-3 text-4xl font-bold leading-tight md:text-5xl">Diese Seite gibt es nicht mehr.</h1>
         <p className="mt-6 text-lg text-schiefer">
           Vielleicht wurde sie beim Umbau unserer Website verschoben. Von hier aus finden Sie alles Wichtige, oder Sie rufen
-          uns an: <a href={SITE.telefonHref} className="link font-semibold">{SITE.telefon}</a>.
+          uns an: <a href={SITE.telefonHref} className="inline-flex items-center gap-1.5 link font-semibold"><TelefonIcon />{SITE.telefon}</a>.
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
           <Link href="/" className="btn btn-primary">

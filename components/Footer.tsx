@@ -4,6 +4,7 @@ import { staedte } from "@/data/staedte";
 import { artikel } from "@/data/ratgeber";
 import { SITE } from "@/lib/site";
 import { artikelUrl, stadtUrl } from "@/lib/links";
+import { TelefonIcon } from "@/components/icons";
 
 const KURZ: Record<string, string> = {
   "kran-mieten-kosten": "Was kostet ein Kran?",
@@ -26,7 +27,8 @@ export function Footer() {
             {SITE.plz} {SITE.ort}
           </address>
           <p className="mt-4 leading-relaxed">
-            <a href={SITE.telefonHref} className="font-semibold text-white hover:underline">
+            <a href={SITE.telefonHref} className="inline-flex items-center gap-1.5 font-semibold text-white hover:underline">
+              <TelefonIcon />
               {SITE.telefon}
             </a>
             <br />
