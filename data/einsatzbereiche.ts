@@ -5,7 +5,7 @@ export const einsatzbereiche: Einsatzbereich[] = [
   {
     slug: "hallenbau",
     name: "Hallen- und Stahlbau",
-    kurz: "Binder, Träger und Dachelemente sicher montieren – mit Montagekran.",
+    kurz: "Binder, Träger und Dachelemente mit dem Montagekran sicher setzen.",
     metaTitle: "Kran für Hallen- und Stahlbau | Zeller Kranservice",
     metaDescription:
       "Autokran für Hallen- und Stahlbau mieten: Montagekran mit Knickausleger, bis ca. 51 m Hakenhöhe, inklusive Kranführer. Deutschlandweit ab Werl.",
@@ -204,7 +204,7 @@ export const einsatzbereiche: Einsatzbereich[] = [
   {
     slug: "dachdecker",
     name: "Dachdecker",
-    kurz: "Ziegel, Paletten und Material schnell aufs Dach – auch ohne Kranführer.",
+    kurz: "Ziegel und Paletten aufs Dach, mit Anhängerkran auch ohne Fahrer.",
     metaTitle: "Kran für Dachdecker mieten | Zeller Kranservice",
     metaDescription:
       "Kran für Dachdecker: Anhängerkran auch ohne Fahrer oder Autokran mit Kranführer. Mit Ziegelzange und Ziegelmax. Deutschlandweit ab Werl.",
@@ -354,7 +354,7 @@ export const einsatzbereiche: Einsatzbereich[] = [
   {
     slug: "geruestbau",
     name: "Gerüstbau",
-    kurz: "Gerüstmaterial in Höhe bringen, wo Aufzug und Seilwinde nicht reichen.",
+    kurz: "Gerüstmaterial nach oben bringen, wo Aufzug und Seilwinde nicht reichen.",
     metaTitle: "Kran für Gerüstbau mieten | Zeller Kranservice",
     metaDescription:
       "Kran für Gerüstbauer: Gerüstmaterial auf Dächer, Innenhöfe und Hochhausteile heben. Anhängerkran oder Autokran mit Kranführer. Rückruf in 24 h.",

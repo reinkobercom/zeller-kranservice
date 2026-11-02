@@ -150,7 +150,7 @@ export function Header() {
                 onOpen={megaAuf}
                 onClose={megaZu}
               >
-                <div className="container-z grid gap-10 py-10 lg:grid-cols-12">
+                <div className="container-z grid gap-10 py-9 lg:grid-cols-12">
                   <div className="lg:col-span-3">
                     <p className="text-2xl font-bold">Mietpark</p>
                     <p className="mt-3 text-schiefer">
@@ -169,7 +169,7 @@ export function Header() {
                     {kategorien.map((k) => (
                       <li key={k.slug}>
                         <Link href={`/${k.urlSlug}/`} className="group block">
-                          <span className="relative block aspect-[16/10] overflow-hidden bg-stein">
+                          <span className="relative block aspect-[2/1] overflow-hidden bg-stein">
                             <Image
                               src={k.bild}
                               alt=""
@@ -199,7 +199,7 @@ export function Header() {
                 onOpen={megaAuf}
                 onClose={megaZu}
               >
-                <div className="container-z grid gap-10 py-10 lg:grid-cols-12">
+                <div className="container-z grid gap-10 py-9 lg:grid-cols-12">
                   <div className="lg:col-span-3">
                     <p className="text-2xl font-bold">Einsatzbereiche</p>
                     <p className="mt-3 text-schiefer">
@@ -210,7 +210,7 @@ export function Header() {
                     </div>
                   </div>
                   <div className="lg:col-span-9">
-                    <ul className="grid grid-cols-2 gap-x-10 border-t border-linie xl:grid-cols-3">
+                    <ul className="grid grid-cols-2 gap-x-10 border-t border-linie">
                       {einsatzbereiche.map((b) => (
                         <li key={b.slug} className="border-b border-linie">
                           <Link href={bereichUrl(b.slug)} className="group flex items-start justify-between gap-4 py-4">

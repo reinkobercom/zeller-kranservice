@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { kategorien } from "@/data/kategorien";
+import { kategorien, kategorieBySlug } from "@/data/kategorien";
+import { geraete } from "@/data/geraete";
+import { fmt } from "@/components/pages/KategorieSeite";
 import { einsatzbereiche } from "@/data/einsatzbereiche";
 import { projekteSortiert } from "@/data/projekte";
 import { staedte } from "@/data/staedte";
@@ -11,7 +13,7 @@ import { ProjektCard } from "@/components/cards";
 import { CtaBand, FaqList, SectionHead } from "@/components/ui";
 import { IMG } from "@/lib/images";
 import { SITE } from "@/lib/site";
-import { anfrageUrl, bereichUrl, stadtUrl } from "@/lib/links";
+import { anfrageUrl, bereichUrl, geraetUrl, stadtUrl } from "@/lib/links";
 import type { Faq } from "@/lib/types";
 
 export const metadata: Metadata = {
@@ -77,6 +79,7 @@ const FAQ: Faq[] = [
 
 export default function Home() {
   const projekte = projekteSortiert();
+  const flotte = geraete.filter((g) => g.verfuegbar);
   const nrw = staedte.filter((s) => s.region === "nrw");
   const de = staedte.filter((s) => s.region === "deutschland");
 
@@ -84,14 +87,18 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-graphit text-white">
-        <Image
-          src={IMG.heroKran}
-          alt="Autokran von Zeller Kranservice bei der Montage einer Stahlhalle"
-          fill
-          priority
-          sizes="100vw"
-          className="-z-10 object-cover object-[50%_35%]"
-        />
+        {/* Ab Desktop ist das Bild breiter als der Bildschirm, damit der Kranmast
+            rechts neben der Höhenskala steht und nicht hinter der Überschrift. */}
+        <div aria-hidden className="absolute inset-y-0 left-0 -z-10 w-full lg:w-[140%]">
+          <Image
+            src={IMG.heroKran}
+            alt=""
+            fill
+            priority
+            sizes="(min-width: 1024px) 140vw, 100vw"
+            className="object-cover object-[50%_30%] lg:object-[50%_22%]"
+          />
+        </div>
         {/* Abdunklung: mobil flächig, ab Desktop von links (Text) und rechts (Skala) */}
         <div aria-hidden className="absolute inset-0 -z-10 bg-graphit/65 lg:hidden" />
         <div
@@ -128,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* GERÄTEWAHL: überlappt den Hero */}
-      <section aria-labelledby="geraet-titel" className="relative z-10 -mt-24 pb-20 md:pb-28">
+      <section aria-labelledby="geraet-titel" className="relative z-10 -mt-24 pb-16 md:pb-20">
         <div className="container-z">
           <div className="border border-linie bg-white shadow-[0_28px_56px_-32px_rgb(33_36_40/0.45)]">
             <div className="flex flex-col gap-2 border-b border-linie px-5 py-4 sm:flex-row sm:items-center sm:justify-between md:px-6">
@@ -187,38 +194,68 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MIETPARK */}
-      <section className="py-20 md:py-28" aria-labelledby="mietpark-titel">
+      {/* FLOTTE */}
+      <section className="py-20 md:py-28" aria-labelledby="flotte-titel">
         <div className="container-z">
           <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHead
-              id="mietpark-titel"
-              title="Unser Mietpark"
-              intro="Sechs Gerätearten, alle im eigenen Bestand und regelmäßig gewartet. Wählen Sie nach Höhe, Last und Platz auf Ihrer Baustelle."
+              id="flotte-titel"
+              title="Unsere Flotte"
+              intro={`${flotte.length} Gerätetypen im eigenen Bestand, gewartet in Werl. Jedes Gerät mit Datenblatt, Lastdiagramm und Projekten.`}
             />
             <Link href="/mietpark/" className="btn btn-secondary self-start md:self-auto">
               Alle Geräte vergleichen
             </Link>
           </div>
-          <ul className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            {kategorien.map((k) => (
-              <li key={k.slug} className="group">
-                <Link href={`/${k.urlSlug}/`} className="block">
-                  <div className="relative aspect-[4/3] overflow-hidden bg-stein">
-                    <Image
-                      src={k.bild}
-                      alt={`${k.name} mieten bei Zeller Kranservice`}
-                      fill
-                      sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
-                  </div>
-                  <p className="mt-4 text-sm font-semibold text-magenta-ink">{k.kennzahl}</p>
-                  <h3 className="mt-1 text-xl font-bold group-hover:text-magenta-ink">{k.name} mieten</h3>
-                  <p className="mt-1 text-schiefer">{k.kurz}</p>
-                </Link>
-              </li>
-            ))}
+
+          <div className="hidden grid-cols-[7rem_1.6fr_1fr_1fr_1fr_1.5rem] gap-6 pb-3 text-sm text-schiefer md:grid">
+            <span />
+            <span>Gerät</span>
+            <span>Höhe</span>
+            <span>Max. Last</span>
+            <span>Bedienung</span>
+            <span />
+          </div>
+          <ul className="border-t border-graphit">
+            {flotte.map((g) => {
+              const korb = g.specs.find((x) => /Korb/.test(x.label))?.wert;
+              return (
+                <li key={g.slug} className="border-b border-linie">
+                  <Link
+                    href={geraetUrl(g)}
+                    className="group grid grid-cols-[5rem_1fr_1.5rem] items-center gap-x-5 gap-y-1 py-3 transition-colors hover:bg-stein md:grid-cols-[7rem_1.6fr_1fr_1fr_1fr_1.5rem] md:gap-x-6"
+                  >
+                    <span className="relative row-span-2 block aspect-[3/2] overflow-hidden bg-stein md:row-span-1">
+                      <Image src={g.bilder[0]} alt="" fill sizes="112px" className="object-cover" />
+                    </span>
+                    <span>
+                      <span className="block font-semibold group-hover:text-magenta-ink">{g.name}</span>
+                      <span className="block text-sm text-schiefer">{kategorieBySlug(g.kategorie).name}</span>
+                    </span>
+                    <span className="hidden md:block">
+                      {g.hakenhoeheM ? `${fmt(g.hakenhoeheM)} m Haken` : g.arbeitshoeheM ? `${fmt(g.arbeitshoeheM)} m Arbeit` : "–"}
+                    </span>
+                    <span className="hidden md:block">{g.tragkraftT ? `${fmt(g.tragkraftT)} t` : korb ? `${korb} Korb` : "–"}</span>
+                    <span className="hidden text-schiefer md:block">
+                      {g.mitFahrer === "immer" ? "mit Kranführer" : "mit oder ohne"}
+                    </span>
+                    <svg
+                      aria-hidden
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      className="row-span-2 justify-self-end text-magenta-ink transition-transform group-hover:translate-x-1 md:row-span-1"
+                    >
+                      <path d="M3 8h9M8 3.5 12.5 8 8 12.5" fill="none" stroke="currentColor" strokeWidth="1.75" />
+                    </svg>
+                    <span className="text-sm text-schiefer md:hidden">
+                      {g.hakenhoeheM ? `${fmt(g.hakenhoeheM)} m` : `${fmt(g.arbeitshoeheM ?? 0)} m`}
+                      {g.tragkraftT ? `, ${fmt(g.tragkraftT)} t` : ""}
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>
