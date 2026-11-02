@@ -103,21 +103,22 @@ export default function Home() {
         <div aria-hidden className="absolute inset-0 -z-10 bg-graphit/60 lg:hidden" />
         <div
           aria-hidden
-          className="absolute inset-0 -z-10 hidden bg-[linear-gradient(90deg,rgb(42_35_38/0.9)_0%,rgb(42_35_38/0.72)_40%,rgb(42_35_38/0.2)_62%,rgb(42_35_38/0)_80%)] lg:block"
+          className="absolute inset-0 -z-10 hidden bg-[linear-gradient(90deg,rgb(42_35_38/0.88)_0%,rgb(42_35_38/0.7)_45%,rgb(42_35_38/0.25)_70%,rgb(42_35_38/0.05)_90%)] lg:block"
         />
         <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-graphit/50 to-transparent" />
 
-        <div className="container-z grid min-h-[min(86svh,50rem)] gap-12 pb-36 pt-16 md:pb-40 md:pt-24 lg:grid-cols-12">
-          <div className="self-center lg:col-span-7">
+        <div className="container-z grid gap-12 pb-36 pt-14 md:pb-36 md:pt-16 lg:grid-cols-12 lg:pt-14">
+          <div className="self-center lg:col-span-9 xl:col-span-8">
             <p className="text-white/85">Familienbetrieb aus Werl, deutschlandweit im Einsatz</p>
-            <h1 className="mt-5 text-[2.5rem] font-bold leading-[1.02] sm:text-6xl xl:text-[4.6rem]">
-              Kran mieten. Mit Kranführer, Planung und Genehmigung.
+            <h1 className="mt-4 max-w-[17ch] text-[2.4rem] font-bold leading-[1.04] sm:text-5xl lg:max-w-none lg:text-[3.3rem] xl:text-[3.6rem]">
+              Kran mieten. Mit Kranführer, <br className="hidden lg:block" />
+              Planung und Genehmigung.
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/85">
               Sie sagen uns, was gehoben werden muss, wir kümmern uns um den Rest. Vom Minikran, der durch Türen
               passt, bis zum Autokran mit 53 m Hakenhöhe, seit {SITE.gegruendet} mit eigenen Kranführern.
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap gap-3">
               <Link href={anfrageUrl({ quelle: "startseite-hero" })} className="btn btn-primary">
                 Kran anfragen
               </Link>
@@ -125,7 +126,7 @@ export default function Home() {
                 {SITE.telefon}
               </a>
             </div>
-            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-5">
+            <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4">
               <div className="flex items-center gap-3">
                 <Image
                   src={IMG.teamDirk}
@@ -140,7 +141,7 @@ export default function Home() {
                   {SITE.rueckruf} bei Ihnen, unverbindlich.
                 </p>
               </div>
-              <Trustindex art="button" minHoehe="3rem" />
+              <Trustindex art="button" className="w-64 shrink-0" minHoehe="3rem" />
             </div>
           </div>
 
