@@ -105,7 +105,9 @@ export default function MietparkPage() {
                           : "–"}
                     </td>
                     <td>
-                      {g.tragkraftT
+                      {g.lastText
+                        ? g.lastText
+                        : g.tragkraftT
                         ? `${fmt(g.tragkraftT)} t`
                         : g.specs.find((s) => /Korb/.test(s.label))?.wert ?? "–"}
                     </td>

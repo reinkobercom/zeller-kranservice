@@ -15,6 +15,7 @@ export const geraete: Geraet[] = [
     beschreibung:
       "Der MKG HMK 1302 hebt 1.200 kg auf 33,85 m Ausladung und erreicht rund 51 m Hakenhöhe. Teleskopierbarer Hubarm und variabler Knickarm machen ihn zum Spezialisten für Hallenbau, Dacharbeiten und Montage über Störkanten. Auf Wunsch mieten Sie ihn mit Arbeitsbühne.",
     hakenhoeheM: 51,
+    lastText: "1,2 t bei 33,85 m",
     reichweiteM: 40,
     kennzahlen: [
       { label: "Hakenhöhe", wert: "ca. 51 m" },

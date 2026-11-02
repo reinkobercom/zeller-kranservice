@@ -41,6 +41,7 @@ export type Geraet = {
   hakenhoeheM?: number;
   arbeitshoeheM?: number;
   tragkraftT?: number; // max. Tragkraft in t
+  lastText?: string; // Anzeige der Last, wenn keine max. Tragkraft angegeben ist
   reichweiteM?: number; // max. Ausladung / seitliche Reichweite
   kennzahlen: Spec[]; // 3–4 Kacheln oben
   specs: Spec[]; // vollständige technische Daten

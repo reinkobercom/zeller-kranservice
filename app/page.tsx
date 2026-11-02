@@ -233,9 +233,9 @@ export default function Home() {
                       <span className="block text-sm text-schiefer">{kategorieBySlug(g.kategorie).name}</span>
                     </span>
                     <span className="hidden md:block">
-                      {g.hakenhoeheM ? `${fmt(g.hakenhoeheM)} m Haken` : g.arbeitshoeheM ? `${fmt(g.arbeitshoeheM)} m Arbeit` : "–"}
+                      {g.hakenhoeheM ? `${fmt(g.hakenhoeheM)} m` : g.arbeitshoeheM ? `${fmt(g.arbeitshoeheM)} m Arbeitshöhe` : "–"}
                     </span>
-                    <span className="hidden md:block">{g.tragkraftT ? `${fmt(g.tragkraftT)} t` : korb ? `${korb} Korb` : "–"}</span>
+                    <span className="hidden md:block">{g.lastText ?? (g.tragkraftT ? `${fmt(g.tragkraftT)} t` : korb ? `${korb} im Korb` : "–")}</span>
                     <span className="hidden text-schiefer md:block">
                       {g.mitFahrer === "immer" ? "mit Kranführer" : "mit oder ohne"}
                     </span>
