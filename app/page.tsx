@@ -141,7 +141,7 @@ export default function Home() {
                   {SITE.rueckruf} bei Ihnen, unverbindlich.
                 </p>
               </div>
-              <Trustindex art="button" className="w-64 shrink-0" minHoehe="3rem" />
+              <Trustindex art="button" className="w-[21rem] max-w-full shrink-0" minHoehe="3rem" />
             </div>
           </div>
 
