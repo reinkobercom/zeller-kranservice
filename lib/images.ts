@@ -70,6 +70,9 @@ export const IMG = {
   raupenbuehneTuer: u("2023/05/raupenbuehne-durch-tuer.jpg"),
   scherenbuehne: u("2023/05/scherenbuehne-aktion.jpg"),
 
+  // Startseite
+  heroKran: u("2026/07/mkg-beast-zeller-34.jpg"),
+
   // Flotte
   flotteSeite: u("2024/10/2024-07-20-Zeller-63.jpg"),
 

@@ -1,8 +1,16 @@
 import Link from "next/link";
 import { kategorien } from "@/data/kategorien";
 import { staedte } from "@/data/staedte";
+import { artikel } from "@/data/ratgeber";
 import { SITE } from "@/lib/site";
-import { stadtUrl } from "@/lib/links";
+import { artikelUrl, stadtUrl } from "@/lib/links";
+
+const KURZ: Record<string, string> = {
+  "kran-mieten-kosten": "Was kostet ein Kran?",
+  "welcher-kran": "Welcher Kran passt?",
+  "kran-genehmigung-strasse": "Genehmigung für den Kran",
+  "hubsteiger-oder-geruest": "Hubsteiger oder Gerüst?",
+};
 
 export function Footer() {
   const nrw = staedte.filter((s) => s.region === "nrw");
@@ -46,6 +54,21 @@ export function Footer() {
               </Link>
             </li>
           </ul>
+
+          <p className="mb-4 mt-10 font-semibold text-white">
+            <Link href="/ratgeber/" className="hover:underline">
+              Ratgeber
+            </Link>
+          </p>
+          <ul className="space-y-2 text-sm">
+            {artikel.map((a) => (
+              <li key={a.slug}>
+                <Link href={artikelUrl(a.slug)} className="hover:text-white hover:underline">
+                  {KURZ[a.slug] ?? a.titel}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div>
@@ -84,11 +107,6 @@ export function Footer() {
         <div className="container-z flex flex-col gap-4 py-6 text-sm md:flex-row md:items-center md:justify-between">
           <p>© Zeller Kranservice, seit {SITE.gegruendet}</p>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
-            <li>
-              <Link href="/ratgeber/" className="hover:text-white">
-                Ratgeber
-              </Link>
-            </li>
             <li>
               <a href={SITE.provenExpert} className="hover:text-white" rel="noopener" target="_blank">
                 Bewertungen

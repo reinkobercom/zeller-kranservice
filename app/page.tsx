@@ -5,14 +5,13 @@ import { kategorien } from "@/data/kategorien";
 import { einsatzbereiche } from "@/data/einsatzbereiche";
 import { projekteSortiert } from "@/data/projekte";
 import { staedte } from "@/data/staedte";
-import { artikel } from "@/data/ratgeber";
 import { HeightRuler } from "@/components/HeightRuler";
 import { ProjektSlider } from "@/components/ProjektSlider";
 import { ProjektCard } from "@/components/cards";
 import { CtaBand, FaqList, SectionHead } from "@/components/ui";
 import { IMG } from "@/lib/images";
 import { SITE } from "@/lib/site";
-import { anfrageUrl, artikelUrl, bereichUrl, stadtUrl } from "@/lib/links";
+import { anfrageUrl, bereichUrl, stadtUrl } from "@/lib/links";
 import type { Faq } from "@/lib/types";
 
 export const metadata: Metadata = {
@@ -84,69 +83,84 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="border-b border-linie">
-        <div className="container-z grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:gap-12 lg:py-20">
-          <div className="lg:col-span-6 lg:pt-6">
-            <p className="text-schiefer">Kranvermietung aus Werl, deutschlandweit im Einsatz</p>
-            <h1 className="mt-4 text-[2.6rem] font-bold leading-[1.02] sm:text-6xl lg:text-[3.4rem] xl:text-[4.4rem]">
+      <section className="relative isolate overflow-hidden bg-graphit text-white">
+        <Image
+          src={IMG.heroKran}
+          alt="Autokran von Zeller Kranservice bei der Montage einer Stahlhalle"
+          fill
+          priority
+          sizes="100vw"
+          className="-z-10 object-cover object-[50%_35%]"
+        />
+        {/* Abdunklung: mobil flächig, ab Desktop von links (Text) und rechts (Skala) */}
+        <div aria-hidden className="absolute inset-0 -z-10 bg-graphit/65 lg:hidden" />
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-10 hidden bg-[linear-gradient(90deg,rgb(24_26_29/0.9)_0%,rgb(24_26_29/0.7)_34%,rgb(24_26_29/0.15)_60%,rgb(24_26_29/0.2)_76%,rgb(24_26_29/0.55)_100%)] lg:block"
+        />
+        <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-t from-graphit/60 to-transparent" />
+
+        <div className="container-z grid min-h-[min(86svh,50rem)] gap-12 pb-36 pt-16 md:pb-40 md:pt-24 lg:grid-cols-12">
+          <div className="self-center lg:col-span-7">
+            <p className="text-white/80">Kranvermietung aus Werl, deutschlandweit im Einsatz</p>
+            <h1 className="mt-5 text-[2.5rem] font-bold leading-[1.02] sm:text-6xl xl:text-[4.6rem]">
               Kran mieten. Mit Kranführer, Planung und Genehmigung.
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-schiefer">
-              Vom Minikran, der durch Türen passt, bis zum Autokran mit 52 m Hakenhöhe: Zeller Kranservice hebt seit{" "}
-              {SITE.gegruendet} mit eigener Flotte und eigenen Kranführern. Wir rufen {SITE.rueckruf} zurück.
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
+              Vom Minikran, der durch Türen passt, bis zum Autokran mit 52 m Hakenhöhe. Seit {SITE.gegruendet} mit
+              eigener Flotte und eigenen Kranführern, {SITE.einsaetzeProJahr} Einsätze im Jahr.
             </p>
-
-            <div className="mt-10">
-              <h2 className="text-lg font-semibold">Welches Gerät brauchen Sie?</h2>
-              <ul className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3">
-                {kategorien.map((k) => (
-                  <li key={k.slug}>
-                    <Link
-                      href={anfrageUrl({ kranart: k.slug, quelle: "startseite-hero" })}
-                      className="flex h-full min-h-[4.25rem] flex-col justify-center rounded-[3px] border border-linie px-4 py-3 transition-colors hover:border-magenta-ink hover:bg-stein"
-                    >
-                      <span className="font-semibold">{k.name}</span>
-                      <span className="text-sm text-schiefer">{k.kennzahl}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href={anfrageUrl({ quelle: "startseite-hero-beratung" })}
-                className="mt-3 inline-block font-semibold text-magenta-ink underline underline-offset-4"
-              >
-                Weiß ich noch nicht, bitte beraten Sie mich
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link href={anfrageUrl({ quelle: "startseite-hero" })} className="btn btn-primary">
+                Kran anfragen
               </Link>
+              <a href={SITE.telefonHref} className="btn btn-outline-light">
+                {SITE.telefon}
+              </a>
             </div>
-
-            <dl className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-linie pt-6">
-              <div>
-                <dt className="text-sm text-schiefer">Im Einsatz seit</dt>
-                <dd className="text-2xl font-bold">{SITE.gegruendet}</dd>
-              </div>
-              <div>
-                <dt className="text-sm text-schiefer">Einsätze pro Jahr</dt>
-                <dd className="text-2xl font-bold">1.000+</dd>
-              </div>
-              <div>
-                <dt className="text-sm text-schiefer">Rückruf</dt>
-                <dd className="text-2xl font-bold">in 24 h</dd>
-              </div>
-            </dl>
+            <p className="mt-4 text-sm text-white/70">Unverbindlich. Wir rufen Sie {SITE.rueckruf} zurück.</p>
           </div>
 
-          <div className="relative min-h-[34rem] overflow-hidden lg:col-span-6 lg:min-h-[44rem]">
-            <Image
-              src={IMG.mkgHalle}
-              alt="MKG-Autokran von Zeller Kranservice montiert eine Stahlhalle"
-              fill
-              priority
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-y-0 right-0 w-[11rem] sm:w-[13.5rem]">
-              <HeightRuler />
+          <div className="relative hidden lg:col-span-3 lg:col-start-10 lg:block lg:pt-14">
+            <HeightRuler />
+          </div>
+        </div>
+      </section>
+
+      {/* GERÄTEWAHL: überlappt den Hero */}
+      <section aria-labelledby="geraet-titel" className="relative z-10 -mt-24 pb-20 md:pb-28">
+        <div className="container-z">
+          <div className="border border-linie bg-white shadow-[0_28px_56px_-32px_rgb(33_36_40/0.45)]">
+            <div className="flex flex-col gap-2 border-b border-linie px-5 py-4 sm:flex-row sm:items-center sm:justify-between md:px-6">
+              <h2 id="geraet-titel" className="font-semibold">
+                Welches Gerät brauchen Sie?
+              </h2>
+              <Link
+                href={anfrageUrl({ quelle: "startseite-geraetewahl-beratung" })}
+                className="text-sm font-semibold text-magenta-ink underline-offset-4 hover:underline"
+              >
+                Weiß ich noch nicht, bitte beraten
+              </Link>
             </div>
+            <ul className="grid grid-cols-2 gap-px bg-linie sm:grid-cols-3 lg:grid-cols-6">
+              {kategorien.map((k) => (
+                <li key={k.slug} className="bg-white">
+                  <Link
+                    href={anfrageUrl({ kranart: k.slug, quelle: "startseite-geraetewahl" })}
+                    className="group relative flex h-full flex-col justify-between gap-6 px-5 py-5 transition-colors hover:bg-stein md:px-6"
+                  >
+                    <span className="text-sm text-schiefer">{k.kennzahl}</span>
+                    <span className="flex items-center justify-between gap-2 text-lg font-semibold">
+                      {k.name}
+                      <svg aria-hidden width="16" height="16" viewBox="0 0 16 16" className="shrink-0 text-magenta-ink transition-transform group-hover:translate-x-1">
+                        <path d="M3 8h9M8 3.5 12.5 8 8 12.5" fill="none" stroke="currentColor" strokeWidth="1.75" />
+                      </svg>
+                    </span>
+                    <span aria-hidden className="absolute inset-x-0 bottom-0 h-[3px] scale-x-0 bg-magenta transition-transform group-hover:scale-x-100" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -219,12 +233,17 @@ export default function Home() {
               intro="Für jedes Gewerk das passende Gerät. Wählen Sie Ihren Einsatz und sehen Sie, welcher Kran passt und wie der Ablauf ist."
             />
           </div>
-          <ul className="grid gap-px bg-linie sm:grid-cols-2 lg:col-span-8">
+          <ul className="grid border-t border-graphit sm:grid-cols-2 sm:gap-x-10 lg:col-span-8">
             {einsatzbereiche.map((b) => (
-              <li key={b.slug} className="bg-stein">
-                <Link href={bereichUrl(b.slug)} className="group flex h-full flex-col bg-white p-6 hover:bg-white/60">
-                  <h3 className="text-lg font-bold group-hover:text-magenta-ink">{b.name}</h3>
-                  <p className="mt-1 text-sm text-schiefer">{b.kurz}</p>
+              <li key={b.slug} className="border-b border-graphit/15">
+                <Link href={bereichUrl(b.slug)} className="group flex items-center justify-between gap-6 py-5">
+                  <span>
+                    <span className="block text-lg font-semibold group-hover:text-magenta-ink">{b.name}</span>
+                    <span className="mt-0.5 block text-sm text-schiefer">{b.kurz}</span>
+                  </span>
+                  <svg aria-hidden width="18" height="18" viewBox="0 0 16 16" className="shrink-0 text-magenta-ink transition-transform group-hover:translate-x-1">
+                    <path d="M3 8h9M8 3.5 12.5 8 8 12.5" fill="none" stroke="currentColor" strokeWidth="1.75" />
+                  </svg>
                 </Link>
               </li>
             ))}
@@ -256,7 +275,7 @@ export default function Home() {
       </section>
 
       {/* TEAM & FAKTEN */}
-      <section className="border-t border-linie py-20 md:py-28" aria-labelledby="team-titel">
+      <section className="bg-stein py-20 md:py-28" aria-labelledby="team-titel">
         <div className="container-z grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <SectionHead
@@ -278,14 +297,19 @@ export default function Home() {
                 </div>
               ))}
             </dl>
-            <Link href="/ueber-uns/" className="link mt-6 inline-block font-semibold">
-              Mehr über uns
-            </Link>
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 font-semibold">
+              <Link href="/ueber-uns/" className="link">
+                Mehr über uns
+              </Link>
+              <a href={SITE.provenExpert} target="_blank" rel="noopener" className="link">
+                Kundenbewertungen auf ProvenExpert
+              </a>
+            </div>
           </div>
           <ul className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:col-span-7">
             {TEAM.map((t) => (
               <li key={t.name}>
-                <div className="relative aspect-[4/5] overflow-hidden bg-stein">
+                <div className="relative aspect-[4/5] overflow-hidden bg-linie">
                   <Image src={t.bild} alt={t.name} fill sizes="(min-width: 1024px) 18vw, 45vw" className="object-cover" />
                 </div>
                 <p className="mt-3 font-semibold">{t.name}</p>
@@ -293,24 +317,6 @@ export default function Home() {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* BEWERTUNGEN */}
-      <section className="bg-graphit py-16 text-white" aria-labelledby="bewertung-titel">
-        <div className="container-z flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <div className="max-w-2xl">
-            <h2 id="bewertung-titel" className="text-2xl font-bold md:text-3xl">
-              Was unsere Kunden sagen
-            </h2>
-            <p className="mt-3 text-white/75">
-              Unsere Kunden bewerten uns unabhängig auf ProvenExpert und Google. Lesen Sie die Erfahrungen von Bauherren,
-              Dachdeckern und Glasbauern.
-            </p>
-          </div>
-          <a href={SITE.provenExpert} target="_blank" rel="noopener" className="btn btn-outline-light self-start">
-            Bewertungen lesen
-          </a>
         </div>
       </section>
 
@@ -356,37 +362,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* RATGEBER */}
-      <section className="bg-stein py-20 md:py-28" aria-labelledby="ratgeber-titel">
-        <div className="container-z">
-          <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <SectionHead id="ratgeber-titel" title="Ratgeber" intro="Antworten auf die Fragen, die uns am häufigsten gestellt werden." />
-            <Link href="/ratgeber/" className="btn btn-secondary self-start md:self-auto">
-              Alle Artikel
-            </Link>
-          </div>
-          <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {artikel.map((a) => (
-              <li key={a.slug} className="group relative bg-white">
-                <div className="relative aspect-[3/2] overflow-hidden">
-                  <Image src={a.bild} alt="" fill sizes="(min-width: 1024px) 24vw, 50vw" className="object-cover" />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-bold leading-snug group-hover:text-magenta-ink">
-                    <Link href={artikelUrl(a.slug)} className="after:absolute after:inset-0">
-                      {a.titel}
-                    </Link>
-                  </h3>
-                  <p className="mt-2 text-sm text-schiefer">{a.lesezeitMin} Minuten Lesezeit</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       {/* FAQ */}
-      <section className="py-20 md:py-28" aria-labelledby="faq-titel">
+      <section className="border-t border-linie py-20 md:py-28" aria-labelledby="faq-titel">
         <div className="container-z grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <SectionHead id="faq-titel" title="Häufige Fragen" />
