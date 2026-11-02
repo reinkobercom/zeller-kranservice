@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { kategorien } from "@/data/kategorien";
 import { staedte } from "@/data/staedte";
@@ -20,7 +21,9 @@ export function Footer() {
     <footer className="bg-graphit text-white/80">
       <div className="container-z grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
-          <p className="display text-2xl font-bold text-white">Zeller Kranservice</p>
+          <Link href="/" aria-label="Zeller Kranservice, zur Startseite" className="inline-block">
+            <Image src="/marke/zeller-logo-weiss.png" alt="Zeller Kranservice" width={805} height={294} className="h-auto w-52" />
+          </Link>
           <address className="mt-4 not-italic leading-relaxed">
             {SITE.strasse}
             <br />
