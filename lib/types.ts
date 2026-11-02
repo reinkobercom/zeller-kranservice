@@ -70,6 +70,7 @@ export type Einsatzbereich = {
   tipps: string[];
   faq: Faq[];
   bild: string;
+  galerie?: string[]; // weitere Fotos aus echten Einsätzen
 };
 
 /** URL: /kran-mieten-{slug}/ */

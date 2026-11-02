@@ -83,4 +83,15 @@ export const IMG = {
   teamNico: u("2022/09/teambild-nico.jpg"),
   teamMatthias: u("2022/09/teambild-matthias.jpg"),
   teamJens: u("2022/09/teambild-jens.jpg"),
+
+  // Neue Fotos (November 2026), liegen bereits in /public/bilder/neu/
+  minikranScherenbuehne: "/bilder/neu/jekko-spx532-glasmontage-scherenbuehne.jpg",
+  minikranScheibe: "/bilder/neu/jekko-spx532-glasscheibe-einsetzen.jpg",
+  minikranSchaufenster: "/bilder/neu/jekko-spx532-schaufenster-glas.jpg",
+  minikranLastanzeige: "/bilder/neu/jekko-spx532-lastanzeige.jpg",
+  glasmontageTeam: "/bilder/neu/glasmontage-team-scherenbuehne.jpg",
+  glasmontageVordach: "/bilder/neu/glasmontage-unter-vordach.jpg",
+  mkg1251Fahrerhaus: "/bilder/neu/mkg-1251-beast-fahrerhaus.jpg",
+  mkg1251Drohne: "/bilder/neu/mkg-1251-hallenbau-drohne.jpg",
+  mkg1251Draufsicht: "/bilder/neu/mkg-1251-hallenbau-draufsicht.jpg",
 } as const;

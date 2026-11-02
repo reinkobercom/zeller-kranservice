@@ -109,7 +109,7 @@ export const projekte: Projekt[] = [
     einsatzbereich: "zimmerei",
     leistung: "Dachelemente über eine Störkante hinweg auf ein Mehrfamilienhaus gesetzt",
     text: "Der MKG HMK 1302 hob die vorgefertigten Dachelemente mit seinem Knickarm über die Störkante des Nachbargebäudes.",
-    bilder: [IMG.mkgDach, IMG.mkgDach2, IMG.mkgAusleger],
+    bilder: [IMG.mkg1302],
     muster: true,
   },
   {

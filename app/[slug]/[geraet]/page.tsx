@@ -80,7 +80,7 @@ export default async function Page({ params }: PageProps<"/[slug]/[geraet]">) {
             </div>
             {g.bilder.length > 1 && (
               <ul className="mt-3 grid grid-cols-3 gap-3 sm:grid-cols-4">
-                {g.bilder.slice(1, 9).map((b, i) => (
+                {g.bilder.slice(1, 13).map((b, i) => (
                   <li key={b} className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stein">
                     <Image src={b} alt={`${g.name} im Einsatz, Bild ${i + 2}`} fill sizes="(min-width:1024px) 14vw, 30vw" className="object-cover" />
                   </li>

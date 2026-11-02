@@ -51,6 +51,7 @@ export const einsatzbereiche: Einsatzbereich[] = [
       },
     ],
     bild: IMG.mkgHalle,
+    galerie: [IMG.mkg1251Drohne, IMG.mkg1251Draufsicht, IMG.mkgHalleWeit, IMG.mkgHalle2, IMG.mkgDach, IMG.mkgDach2],
   },
   {
     slug: "pool-einheben",
@@ -151,6 +152,7 @@ export const einsatzbereiche: Einsatzbereich[] = [
       },
     ],
     bild: IMG.minikranGlas1,
+    galerie: [IMG.minikranSchaufenster, IMG.minikranScheibe, IMG.glasmontageTeam, IMG.minikranScherenbuehne, IMG.glasmontageVordach, IMG.minikranGlas3],
   },
   {
     slug: "wintergarten",

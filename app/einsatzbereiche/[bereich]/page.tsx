@@ -82,6 +82,27 @@ export default async function Page({ params }: PageProps<"/einsatzbereiche/[bere
         </div>
       </section>
 
+      {b.galerie && b.galerie.length > 0 && (
+        <section className="pb-16 md:pb-24" aria-labelledby="galerie-titel">
+          <div className="container-z">
+            <SectionHead id="galerie-titel" title={`${b.name}: Bilder aus echten Einsätzen`} />
+            <ul className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
+              {b.galerie.map((src, i) => (
+                <li key={src} className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-stein">
+                  <Image
+                    src={src}
+                    alt={`${b.name} mit Zeller Kranservice, Einsatzfoto ${i + 1}`}
+                    fill
+                    sizes="(min-width:768px) 31vw, 48vw"
+                    className="object-cover"
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       <section className="bg-stein py-16 md:py-24">
         <div className="container-z">
           <SectionHead title="Diese Geräte setzen wir ein" intro="Das erste Gerät ist unsere übliche Wahl. Welches am Ende passt, klären wir bei der Besichtigung." />
