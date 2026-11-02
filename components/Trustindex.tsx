@@ -30,8 +30,13 @@ export function Trustindex({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    // Trustindex entfernt sein <script> nach dem Rendern. Beim Zurück-Navigieren
+    // läuft der Effekt erneut; deshalb merken wir uns am Element selbst, dass
+    // es schon geladen wurde, und laden nie in einen gefüllten Container.
+    if (el.dataset.tiGeladen === "1" || el.childElementCount > 0) return;
     const laden = () => {
-      if (el.querySelector("script")) return;
+      if (el.dataset.tiGeladen === "1" || el.childElementCount > 0) return;
+      el.dataset.tiGeladen = "1";
       const s = document.createElement("script");
       s.src = `https://cdn.trustindex.io/loader.js?${TRUSTINDEX[art]}`;
       s.defer = true;
