@@ -108,9 +108,9 @@ export default function Home() {
         <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-graphit/50 to-transparent" />
 
         <div className="container-z grid gap-12 pb-36 pt-14 md:pt-16 lg:min-h-[min(calc(100svh-9.5rem),54rem)] lg:grid-cols-12 lg:pb-32 lg:pt-12">
-          <div className="self-center lg:col-span-9 xl:col-span-8">
+          <div className="self-center lg:col-span-10 xl:col-span-9">
             <p className="text-white/85">Familienbetrieb aus Werl, deutschlandweit im Einsatz</p>
-            <h1 className="mt-4 max-w-[17ch] text-[2.4rem] font-bold leading-[1.04] sm:text-5xl lg:max-w-none lg:text-[3.5rem] xl:text-[4rem]">
+            <h1 className="mt-4 max-w-[17ch] text-[2.4rem] font-bold leading-[1.04] sm:text-5xl lg:max-w-none lg:text-[3.3rem] xl:text-[3.7rem]">
               Kran mieten. Mit Kranführer, <br className="hidden lg:block" />
               Planung und Genehmigung.
             </h1>
