@@ -7,7 +7,6 @@ import { fmt } from "@/components/pages/KategorieSeite";
 import { einsatzbereiche } from "@/data/einsatzbereiche";
 import { projekteSortiert } from "@/data/projekte";
 import { staedte } from "@/data/staedte";
-import { HeightRuler } from "@/components/HeightRuler";
 import { ProjektSlider } from "@/components/ProjektSlider";
 import { ProjektCard } from "@/components/cards";
 import { CtaBand, FaqList, SectionHead } from "@/components/ui";
@@ -88,7 +87,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-graphit text-white">
         {/* Ab Desktop ist das Bild breiter als der Bildschirm, damit der Kranmast
-            rechts neben der Höhenskala steht und nicht hinter der Überschrift. */}
+            rechts steht und nicht hinter der Überschrift. */}
         <div aria-hidden className="absolute inset-y-0 left-0 -z-10 w-full lg:w-[140%]">
           <Image
             src={IMG.heroKran}
@@ -99,11 +98,11 @@ export default function Home() {
             className="object-cover object-[50%_30%] lg:object-[50%_22%]"
           />
         </div>
-        {/* Abdunklung: mobil flächig, ab Desktop von links (Text) und rechts (Skala) */}
+        {/* Abdunklung: mobil flächig, ab Desktop nur links hinter dem Text */}
         <div aria-hidden className="absolute inset-0 -z-10 bg-graphit/65 lg:hidden" />
         <div
           aria-hidden
-          className="absolute inset-0 -z-10 hidden bg-[linear-gradient(90deg,rgb(24_26_29/0.9)_0%,rgb(24_26_29/0.7)_34%,rgb(24_26_29/0.15)_60%,rgb(24_26_29/0.2)_76%,rgb(24_26_29/0.55)_100%)] lg:block"
+          className="absolute inset-0 -z-10 hidden bg-[linear-gradient(90deg,rgb(24_26_29/0.9)_0%,rgb(24_26_29/0.7)_34%,rgb(24_26_29/0.15)_62%,rgb(24_26_29/0.1)_100%)] lg:block"
         />
         <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-t from-graphit/60 to-transparent" />
 
@@ -128,9 +127,6 @@ export default function Home() {
             <p className="mt-4 text-sm text-white/70">Unverbindlich. Wir rufen Sie {SITE.rueckruf} zurück.</p>
           </div>
 
-          <div className="relative hidden lg:col-span-3 lg:col-start-10 lg:block lg:pt-14">
-            <HeightRuler />
-          </div>
         </div>
       </section>
 
