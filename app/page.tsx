@@ -107,18 +107,18 @@ export default function Home() {
         />
         <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-graphit/50 to-transparent" />
 
-        <div className="container-z grid gap-12 pb-36 pt-14 md:pb-36 md:pt-16 lg:grid-cols-12 lg:pt-14">
+        <div className="container-z grid gap-12 pb-36 pt-14 md:pt-16 lg:min-h-[min(calc(100svh-9.5rem),54rem)] lg:grid-cols-12 lg:pb-32 lg:pt-12">
           <div className="self-center lg:col-span-9 xl:col-span-8">
             <p className="text-white/85">Familienbetrieb aus Werl, deutschlandweit im Einsatz</p>
-            <h1 className="mt-4 max-w-[17ch] text-[2.4rem] font-bold leading-[1.04] sm:text-5xl lg:max-w-none lg:text-[3.3rem] xl:text-[3.6rem]">
+            <h1 className="mt-4 max-w-[17ch] text-[2.4rem] font-bold leading-[1.04] sm:text-5xl lg:max-w-none lg:text-[3.5rem] xl:text-[4rem]">
               Kran mieten. Mit Kranführer, <br className="hidden lg:block" />
               Planung und Genehmigung.
             </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/85">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 xl:text-xl">
               Sie sagen uns, was gehoben werden muss, wir kümmern uns um den Rest. Vom Minikran, der durch Türen
               passt, bis zum Autokran mit 53 m Hakenhöhe, seit {SITE.gegruendet} mit eigenen Kranführern.
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <Link href={anfrageUrl({ quelle: "startseite-hero" })} className="btn btn-primary">
                 Kran anfragen
               </Link>
@@ -126,7 +126,7 @@ export default function Home() {
                 {SITE.telefon}
               </a>
             </div>
-            <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
               <div className="flex items-center gap-3">
                 <Image
                   src={IMG.teamDirk}
