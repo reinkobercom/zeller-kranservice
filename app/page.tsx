@@ -87,19 +87,23 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-graphit text-white">
-        <Image
-          src={IMG.heroSonne}
-          alt="Minikran von Zeller Kranservice im Einsatz an einem Neubau"
-          fill
-          priority
-          sizes="100vw"
-          className="-z-10 object-cover object-[60%_55%]"
-        />
+        {/* Ab Desktop ist das Bild etwas breiter als der Bildschirm, damit der
+            Minikran rechts steht und nicht hinter dem Text. */}
+        <div aria-hidden className="absolute inset-y-0 left-0 -z-10 w-full lg:w-[122%]">
+          <Image
+            src={IMG.heroSonne}
+            alt=""
+            fill
+            priority
+            sizes="(min-width: 1024px) 122vw, 100vw"
+            className="object-cover object-[60%_55%] lg:object-[50%_58%]"
+          />
+        </div>
         {/* Abdunklung: mobil flächig, ab Desktop nur links hinter dem Text */}
         <div aria-hidden className="absolute inset-0 -z-10 bg-graphit/60 lg:hidden" />
         <div
           aria-hidden
-          className="absolute inset-0 -z-10 hidden bg-[linear-gradient(90deg,rgb(42_35_38/0.88)_0%,rgb(42_35_38/0.66)_36%,rgb(42_35_38/0.08)_64%,rgb(42_35_38/0)_100%)] lg:block"
+          className="absolute inset-0 -z-10 hidden bg-[linear-gradient(90deg,rgb(42_35_38/0.9)_0%,rgb(42_35_38/0.72)_40%,rgb(42_35_38/0.2)_62%,rgb(42_35_38/0)_80%)] lg:block"
         />
         <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-graphit/50 to-transparent" />
 
