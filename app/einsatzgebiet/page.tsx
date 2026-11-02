@@ -61,7 +61,7 @@ export default function Page() {
           intro={`Zeller Kranservice sitzt in Werl zwischen Ruhrgebiet, Sauerland und Münsterland. Von hier fahren wir mit eigener Flotte und eigenen Kranführern zu Einsätzen in ganz Deutschland, ${SITE.einsaetzeProJahr} im Jahr.`}
         />
 
-        <ol className="mt-14 grid gap-px bg-linie md:grid-cols-3">
+        <ol className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-linie bg-linie md:grid-cols-3">
           {ZONEN.map((z, i) => {
             const vorher = i === 0 ? -1 : ZONEN[i - 1].bis;
             const liste = sortiert.filter((s) => s.luftlinieKm > vorher && s.luftlinieKm <= z.bis);

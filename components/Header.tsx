@@ -135,7 +135,7 @@ export function Header() {
               width={2093}
               height={750}
               priority
-              className="h-11 w-auto rounded-[3px]"
+              className="h-11 w-auto rounded-xl"
             />
           </Link>
 
@@ -169,7 +169,7 @@ export function Header() {
                     {kategorien.map((k) => (
                       <li key={k.slug}>
                         <Link href={`/${k.urlSlug}/`} className="group block">
-                          <span className="relative block aspect-[2/1] overflow-hidden bg-stein">
+                          <span className="relative block aspect-[2/1] overflow-hidden rounded-2xl bg-stein">
                             <Image
                               src={k.bild}
                               alt=""
@@ -280,7 +280,7 @@ export function Header() {
               <ul className="grid grid-cols-2 gap-2">
                 {kategorien.map((k) => (
                   <li key={k.slug}>
-                    <Link href={`/${k.urlSlug}/`} className="block h-full rounded-[3px] border border-linie p-3">
+                    <Link href={`/${k.urlSlug}/`} className="block h-full rounded-xl border border-linie p-3">
                       <span className="block font-semibold">{k.name}</span>
                       <span className="block text-sm text-schiefer">{k.kennzahl}</span>
                     </Link>

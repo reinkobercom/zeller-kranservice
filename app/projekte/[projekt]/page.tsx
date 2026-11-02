@@ -50,7 +50,7 @@ export default async function Page({ params }: PageProps<"/projekte/[projekt]">)
         <header className="container-z grid gap-10 py-10 md:py-14 lg:grid-cols-12">
           <div className="lg:col-span-5">
             {p.muster && (
-              <p className="mb-4 inline-block rounded-[2px] bg-stein px-3 py-1 text-sm font-semibold text-bordeaux">
+              <p className="mb-4 inline-block rounded-full bg-stein px-3 py-1 text-sm font-semibold text-bordeaux">
                 Beispielprojekt: echte Fotos und Daten folgen
               </p>
             )}
@@ -73,7 +73,7 @@ export default async function Page({ params }: PageProps<"/projekte/[projekt]">)
           </div>
           <div className="space-y-3 lg:col-span-7">
             {p.bilder.map((src, i) => (
-              <div key={src} className="relative aspect-[4/3] overflow-hidden bg-stein">
+              <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stein">
                 <Image
                   src={src}
                   alt={`${g?.name ?? "Kran"} beim Einsatz in ${p.ort}, Bild ${i + 1}`}

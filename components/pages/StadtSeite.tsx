@@ -62,7 +62,7 @@ export function StadtSeite({ s }: { s: Stadt }) {
               </div>
             </dl>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden bg-stein lg:col-span-5">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stein lg:col-span-5">
             <Image src={bild} alt={`Kraneinsatz von Zeller Kranservice, Beispiel für ${s.name}`} fill priority sizes="(min-width:1024px) 42vw, 100vw" className="object-cover" />
           </div>
         </div>
@@ -76,10 +76,10 @@ export function StadtSeite({ s }: { s: Stadt }) {
             {bereiche.length > 0 && (
               <>
                 <h3 className="mt-10 text-xl font-bold">Häufige Einsätze in {s.name}</h3>
-                <ul className="mt-4 grid gap-px bg-linie sm:grid-cols-2">
+                <ul className="mt-4 grid gap-3 sm:grid-cols-2">
                   {bereiche.map((b) => (
                     <li key={b.slug} className="bg-white">
-                      <Link href={bereichUrl(b.slug)} className="group block border border-linie p-4 hover:border-magenta-ink">
+                      <Link href={bereichUrl(b.slug)} className="group block h-full rounded-xl border border-linie p-4 hover:border-magenta-ink">
                         <span className="font-semibold group-hover:text-magenta-ink">{b.name}</span>
                         <span className="mt-1 block text-sm text-schiefer">{b.kurz}</span>
                       </Link>
@@ -126,7 +126,7 @@ export function StadtSeite({ s }: { s: Stadt }) {
               <li key={k.slug}>
                 <Link
                   href={anfrageUrl({ kranart: k.slug, quelle })}
-                  className="inline-block rounded-[3px] border border-linie bg-white px-3 py-1.5 text-sm font-medium hover:border-magenta-ink"
+                  className="inline-block rounded-xl border border-linie bg-white px-3 py-1.5 text-sm font-medium hover:border-magenta-ink"
                 >
                   {k.name} in {s.name} anfragen
                 </Link>

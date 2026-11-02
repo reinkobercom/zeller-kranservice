@@ -6,6 +6,7 @@ import { einsatzbereiche } from "@/data/einsatzbereiche";
 import { projekteSortiert } from "@/data/projekte";
 import { artikel } from "@/data/ratgeber";
 import { GeraetCard, ProjektCard } from "@/components/cards";
+import { Trustindex } from "@/components/Trustindex";
 import { Breadcrumbs, CtaBand, FaqList, JsonLd, SectionHead } from "@/components/ui";
 import { SITE } from "@/lib/site";
 import { anfrageUrl, artikelUrl, bereichUrl, geraetUrl } from "@/lib/links";
@@ -40,7 +41,7 @@ export function KategorieSeite({ k }: { k: Kategorie }) {
             </div>
             <p className="mt-4 text-sm text-schiefer">Unverbindlich. Wir rufen {SITE.rueckruf} zurück.</p>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden bg-stein lg:col-span-6">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stein lg:col-span-6">
             <Image src={k.bild} alt={`${k.name} von Zeller Kranservice im Einsatz`} fill priority sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
           </div>
         </div>
@@ -119,7 +120,7 @@ export function KategorieSeite({ k }: { k: Kategorie }) {
                 <ul className="mt-3 flex flex-wrap gap-2">
                   {bereiche.map((b) => (
                     <li key={b.slug}>
-                      <Link href={bereichUrl(b.slug)} className="inline-block rounded-[3px] border border-linie bg-white px-3 py-1.5 text-sm font-medium hover:border-magenta-ink">
+                      <Link href={bereichUrl(b.slug)} className="inline-block rounded-xl border border-linie bg-white px-3 py-1.5 text-sm font-medium hover:border-magenta-ink">
                         {b.name}
                       </Link>
                     </li>
@@ -145,6 +146,13 @@ export function KategorieSeite({ k }: { k: Kategorie }) {
           </div>
         </section>
       )}
+
+      <section className="border-t border-linie py-16 md:py-24" aria-labelledby="bewertungen-titel">
+        <div className="container-z">
+          <SectionHead id="bewertungen-titel" title="Was unsere Kunden sagen" />
+          <Trustindex art="slider" className="mt-8" minHoehe="16rem" />
+        </div>
+      </section>
 
       <section className="border-t border-linie py-16 md:py-24">
         <div className="container-z grid gap-12 lg:grid-cols-12">

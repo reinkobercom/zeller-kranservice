@@ -8,6 +8,7 @@ import { einsatzbereiche } from "@/data/einsatzbereiche";
 import { projekteSortiert } from "@/data/projekte";
 import { staedte } from "@/data/staedte";
 import { ProjektSlider } from "@/components/ProjektSlider";
+import { Trustindex } from "@/components/Trustindex";
 import { ProjektCard } from "@/components/cards";
 import { CtaBand, FaqList, SectionHead } from "@/components/ui";
 import { IMG } from "@/lib/images";
@@ -86,35 +87,31 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-graphit text-white">
-        {/* Ab Desktop ist das Bild breiter als der Bildschirm, damit der Kranmast
-            rechts steht und nicht hinter der Überschrift. */}
-        <div aria-hidden className="absolute inset-y-0 left-0 -z-10 w-full lg:w-[140%]">
-          <Image
-            src={IMG.heroKran}
-            alt=""
-            fill
-            priority
-            sizes="(min-width: 1024px) 140vw, 100vw"
-            className="object-cover object-[50%_30%] lg:object-[50%_22%]"
-          />
-        </div>
+        <Image
+          src={IMG.heroSonne}
+          alt="Minikran von Zeller Kranservice im Einsatz an einem Neubau"
+          fill
+          priority
+          sizes="100vw"
+          className="-z-10 object-cover object-[60%_55%]"
+        />
         {/* Abdunklung: mobil flächig, ab Desktop nur links hinter dem Text */}
-        <div aria-hidden className="absolute inset-0 -z-10 bg-graphit/65 lg:hidden" />
+        <div aria-hidden className="absolute inset-0 -z-10 bg-graphit/60 lg:hidden" />
         <div
           aria-hidden
-          className="absolute inset-0 -z-10 hidden bg-[linear-gradient(90deg,rgb(24_26_29/0.9)_0%,rgb(24_26_29/0.7)_34%,rgb(24_26_29/0.15)_62%,rgb(24_26_29/0.1)_100%)] lg:block"
+          className="absolute inset-0 -z-10 hidden bg-[linear-gradient(90deg,rgb(42_35_38/0.88)_0%,rgb(42_35_38/0.66)_36%,rgb(42_35_38/0.08)_64%,rgb(42_35_38/0)_100%)] lg:block"
         />
-        <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-t from-graphit/60 to-transparent" />
+        <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-graphit/50 to-transparent" />
 
         <div className="container-z grid min-h-[min(86svh,50rem)] gap-12 pb-36 pt-16 md:pb-40 md:pt-24 lg:grid-cols-12">
           <div className="self-center lg:col-span-7">
-            <p className="text-white/80">Kranvermietung aus Werl, deutschlandweit im Einsatz</p>
+            <p className="text-white/85">Familienbetrieb aus Werl, deutschlandweit im Einsatz</p>
             <h1 className="mt-5 text-[2.5rem] font-bold leading-[1.02] sm:text-6xl xl:text-[4.6rem]">
               Kran mieten. Mit Kranführer, Planung und Genehmigung.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
-              Vom Minikran, der durch Türen passt, bis zum Autokran mit 53 m Hakenhöhe. Seit {SITE.gegruendet} mit
-              eigener Flotte und eigenen Kranführern, {SITE.einsaetzeProJahr} Einsätze im Jahr.
+              Sie sagen uns, was gehoben werden muss, wir kümmern uns um den Rest. Vom Minikran, der durch Türen
+              passt, bis zum Autokran mit 53 m Hakenhöhe, seit {SITE.gegruendet} mit eigenen Kranführern.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link href={anfrageUrl({ quelle: "startseite-hero" })} className="btn btn-primary">
@@ -124,7 +121,23 @@ export default function Home() {
                 {SITE.telefon}
               </a>
             </div>
-            <p className="mt-4 text-sm text-white/70">Unverbindlich. Wir rufen Sie {SITE.rueckruf} zurück.</p>
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-5">
+              <div className="flex items-center gap-3">
+                <Image
+                  src={IMG.teamDirk}
+                  alt=""
+                  width={96}
+                  height={96}
+                  className="h-12 w-12 rounded-full border-2 border-white/80 object-cover"
+                />
+                <p className="text-sm leading-snug text-white/85">
+                  <span className="font-semibold text-white">Dirk Zeller</span> und Team melden sich
+                  <br />
+                  {SITE.rueckruf} bei Ihnen, unverbindlich.
+                </p>
+              </div>
+              <Trustindex art="button" minHoehe="3rem" />
+            </div>
           </div>
 
         </div>
@@ -133,7 +146,7 @@ export default function Home() {
       {/* GERÄTEWAHL: überlappt den Hero */}
       <section aria-labelledby="geraet-titel" className="relative z-10 -mt-24 pb-16 md:pb-20">
         <div className="container-z">
-          <div className="border border-linie bg-white shadow-[0_28px_56px_-32px_rgb(33_36_40/0.45)]">
+          <div className="overflow-hidden rounded-2xl border border-linie bg-white shadow-[0_28px_56px_-32px_rgb(42_35_38/0.45)]">
             <div className="flex flex-col gap-2 border-b border-linie px-5 py-4 sm:flex-row sm:items-center sm:justify-between md:px-6">
               <h2 id="geraet-titel" className="font-semibold">
                 Welches Gerät brauchen Sie?
@@ -187,6 +200,18 @@ export default function Home() {
               <ProjektCard key={p.slug} p={p} dark />
             ))}
           </ProjektSlider>
+        </div>
+      </section>
+
+      {/* BEWERTUNGEN */}
+      <section className="border-b border-linie py-20 md:py-24" aria-labelledby="bewertungen-titel">
+        <div className="container-z">
+          <SectionHead
+            id="bewertungen-titel"
+            title="Was unsere Kunden sagen"
+            intro="Echte Bewertungen von Bauherren, Handwerksbetrieben und Firmen auf Google."
+          />
+          <Trustindex art="slider" className="mt-10" minHoehe="16rem" />
         </div>
       </section>
 
@@ -285,18 +310,20 @@ export default function Home() {
       </section>
 
       {/* ABLAUF */}
-      <section className="py-20 md:py-28" aria-labelledby="ablauf-titel">
+      <section className="bg-rose py-20 md:py-28" aria-labelledby="ablauf-titel">
         <div className="container-z">
           <SectionHead
             id="ablauf-titel"
             title="So läuft Ihr Kraneinsatz"
             intro="Sie sagen uns, was gehoben werden muss. Um Planung, Technik und Behörden kümmern wir uns."
           />
-          <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+          <ol className="mt-12 grid gap-5 md:grid-cols-3">
             {ABLAUF.map((s, i) => (
-              <li key={s.titel} className="border-t-2 border-graphit pt-6">
-                <span className="text-sm font-semibold text-magenta-ink">Schritt {i + 1}</span>
-                <h3 className="mt-2 text-xl font-bold">{s.titel}</h3>
+              <li key={s.titel} className="rounded-2xl bg-white p-7">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-magenta-ink font-bold text-white">
+                  {i + 1}
+                </span>
+                <h3 className="mt-5 text-xl font-bold">{s.titel}</h3>
                 <p className="mt-3 leading-relaxed text-schiefer">{s.text}</p>
               </li>
             ))}
@@ -307,54 +334,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TEAM & FAKTEN */}
-      <section className="bg-stein py-20 md:py-28" aria-labelledby="team-titel">
-        <div className="container-z grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <SectionHead
-              id="team-titel"
-              title="Ein Familienbetrieb mit eigenen Kranführern"
-              intro={`Dirk Zeller hat das Unternehmen ${SITE.gegruendet} gegründet und sitzt bis heute selbst im Kran. Unsere Kranführer kennen die Geräte, mit denen sie arbeiten, und jede Baustelle wird vorher geplant.`}
+      {/* PERSÖNLICH: Dirk Zeller und Team */}
+      <section className="py-20 md:py-28" aria-labelledby="team-titel">
+        <div className="container-z grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-stein lg:col-span-5">
+            <Image
+              src={IMG.teamDirk}
+              alt="Dirk Zeller, Geschäftsführer und Kranführer"
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="object-cover"
             />
-            <dl className="mt-10 divide-y divide-linie border-y border-linie">
-              {[
-                ["Gegründet", `${SITE.gegruendet} in Werl`],
-                ["Einsätze pro Jahr", SITE.einsaetzeProJahr],
-                ["Geräte", "12 Anhängerkrane, 6 Autokrane, Minikran, Hubsteiger, Bühnen, Glashebegerät"],
-                ["Einsatzgebiet", "Deutschlandweit, Schwerpunkt NRW"],
-                ["Genehmigungen", "beantragen wir für Sie"],
-              ].map(([k, v]) => (
-                <div key={k} className="grid grid-cols-[9rem_1fr] gap-4 py-3">
-                  <dt className="text-schiefer">{k}</dt>
-                  <dd className="font-medium">{v}</dd>
-                </div>
-              ))}
-            </dl>
-            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 font-semibold">
-              <Link href="/ueber-uns/" className="link">
+          </div>
+          <div className="lg:col-span-7">
+            <h2 id="team-titel" className="text-3xl font-bold leading-[1.1] md:text-[2.6rem]">
+              Ein Familienbetrieb, bei dem der Chef selbst im Kran sitzt
+            </h2>
+            <blockquote className="mt-8 border-l-4 border-magenta pl-6">
+              <p className="text-xl leading-relaxed md:text-2xl">
+                „Jedes Projekt beginnt bei uns mit einem Gespräch und, wenn nötig, mit einem Blick auf die Baustelle. Rufen
+                Sie mich einfach an.“
+              </p>
+              <footer className="mt-4 text-schiefer">
+                <span className="font-semibold text-graphit">Dirk Zeller</span>, Gründer {SITE.gegruendet}, Geschäftsführer
+                und Kranführer
+              </footer>
+            </blockquote>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href={SITE.telefonHref} className="btn btn-primary">
+                {SITE.telefon} anrufen
+              </a>
+              <Link href="/ueber-uns/" className="btn btn-secondary">
                 Mehr über uns
               </Link>
-              <a href={SITE.provenExpert} target="_blank" rel="noopener" className="link">
-                Kundenbewertungen auf ProvenExpert
-              </a>
             </div>
+
+            <ul className="mt-12 grid grid-cols-2 gap-6 border-t border-linie pt-8 sm:grid-cols-4">
+              {TEAM.filter((t) => t.name !== "Dirk Zeller").map((t) => (
+                <li key={t.name} className="flex items-center gap-3">
+                  <Image src={t.bild} alt="" width={112} height={112} className="h-14 w-14 shrink-0 rounded-full object-cover" />
+                  <span className="leading-tight">
+                    <span className="block font-semibold">{t.name.split(" ")[0]}</span>
+                    <span className="block text-sm text-schiefer">{t.rolle}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-8 text-sm text-schiefer">
+              {SITE.einsaetzeProJahr} Einsätze im Jahr, 6 Autokrane, 12 Anhängerkrane und Spezialgeräte im eigenen Bestand.{" "}
+              <a href={SITE.provenExpert} target="_blank" rel="noopener" className="link">
+                Kundenbewertungen lesen
+              </a>
+            </p>
           </div>
-          <ul className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:col-span-7">
-            {TEAM.map((t) => (
-              <li key={t.name}>
-                <div className="relative aspect-[4/5] overflow-hidden bg-linie">
-                  <Image src={t.bild} alt={t.name} fill sizes="(min-width: 1024px) 18vw, 45vw" className="object-cover" />
-                </div>
-                <p className="mt-3 font-semibold">{t.name}</p>
-                <p className="text-sm text-schiefer">{t.rolle}</p>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
       {/* EINSATZGEBIET */}
-      <section className="py-20 md:py-28" aria-labelledby="gebiet-titel">
+      <section className="bg-stein py-20 md:py-28" aria-labelledby="gebiet-titel">
         <div className="container-z grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <SectionHead
@@ -396,7 +433,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-linie py-20 md:py-28" aria-labelledby="faq-titel">
+      <section className="py-20 md:py-28" aria-labelledby="faq-titel">
         <div className="container-z grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <SectionHead id="faq-titel" title="Häufige Fragen" />

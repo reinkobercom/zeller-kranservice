@@ -72,6 +72,7 @@ export const IMG = {
 
   // Startseite
   heroKran: u("2026/07/mkg-beast-zeller-34.jpg"),
+  heroSonne: u("2026/07/jekko-zeller-10.jpg"),
 
   // Flotte
   flotteSeite: u("2024/10/2024-07-20-Zeller-63.jpg"),

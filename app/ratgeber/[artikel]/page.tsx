@@ -158,7 +158,7 @@ export default async function Page({ params }: PageProps<"/ratgeber/[artikel]">)
                   const kat = kategorieBySlug(k);
                   return (
                     <li key={k} className="!m-0 !p-0 before:!hidden">
-                      <Link href={`/${kat.urlSlug}/`} className="inline-block rounded-[3px] border border-linie px-3 py-1.5 text-sm font-medium !no-underline hover:border-magenta-ink">
+                      <Link href={`/${kat.urlSlug}/`} className="inline-block rounded-xl border border-linie px-3 py-1.5 text-sm font-medium !no-underline hover:border-magenta-ink">
                         {kat.name} mieten
                       </Link>
                     </li>
@@ -166,7 +166,7 @@ export default async function Page({ params }: PageProps<"/ratgeber/[artikel]">)
                 })}
                 {bereiche.map((b) => (
                   <li key={b.slug} className="!m-0 !p-0 before:!hidden">
-                    <Link href={bereichUrl(b.slug)} className="inline-block rounded-[3px] border border-linie px-3 py-1.5 text-sm font-medium !no-underline hover:border-magenta-ink">
+                    <Link href={bereichUrl(b.slug)} className="inline-block rounded-xl border border-linie px-3 py-1.5 text-sm font-medium !no-underline hover:border-magenta-ink">
                       {b.name}
                     </Link>
                   </li>

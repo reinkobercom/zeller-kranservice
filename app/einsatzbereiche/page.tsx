@@ -26,7 +26,7 @@ export default function Page() {
           {einsatzbereiche.map((b) => (
             <li key={b.slug} className="group">
               <Link href={bereichUrl(b.slug)} className="block">
-                <div className="relative aspect-[4/3] overflow-hidden bg-stein">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stein">
                   <Image src={b.bild} alt="" fill sizes="(min-width:1024px) 30vw, 50vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
                 </div>
                 <h2 className="mt-4 text-xl font-bold group-hover:text-magenta-ink">{b.name}</h2>

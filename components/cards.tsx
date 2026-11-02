@@ -8,7 +8,7 @@ import { anfrageUrl, geraetUrl, monatJahr, projektUrl } from "@/lib/links";
 export function GeraetCard({ g, quelle }: { g: Geraet; quelle?: string }) {
   const k = kategorieBySlug(g.kategorie);
   return (
-    <article className="flex flex-col border border-linie bg-white">
+    <article className="flex flex-col overflow-hidden rounded-2xl border border-linie bg-white">
       <Link href={geraetUrl(g)} className="relative block aspect-[4/3] overflow-hidden bg-stein">
         <Image
           src={g.bilder[0]}
@@ -18,7 +18,7 @@ export function GeraetCard({ g, quelle }: { g: Geraet; quelle?: string }) {
           className="object-cover"
         />
         {!g.verfuegbar && (
-          <span className="absolute left-3 top-3 rounded-[2px] bg-white px-2 py-1 text-xs font-semibold">
+          <span className="absolute left-3 top-3 rounded-full bg-white px-2 py-1 text-xs font-semibold">
             Bald verfügbar
           </span>
         )}
@@ -57,7 +57,7 @@ export function ProjektCard({ p, dark = false }: { p: Projekt; dark?: boolean })
   const g = geraetBySlug(p.geraet);
   return (
     <article className="group relative flex h-full flex-col">
-      <div className="relative aspect-[4/3] overflow-hidden bg-stein">
+      <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stein">
         <Image
           src={p.bilder[0]}
           alt={`${g?.name ?? "Kran"}: ${p.leistung} (${p.ort})`}
@@ -66,7 +66,7 @@ export function ProjektCard({ p, dark = false }: { p: Projekt; dark?: boolean })
           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
         {p.muster && (
-          <span className="absolute left-3 top-3 rounded-[2px] bg-white/90 px-2 py-0.5 text-xs font-semibold text-bordeaux">
+          <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-semibold text-bordeaux">
             Beispiel
           </span>
         )}

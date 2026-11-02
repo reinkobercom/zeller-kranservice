@@ -52,13 +52,21 @@ export default function Page() {
             Schriftarten werden von unserem eigenen Server geladen, nicht von Google.
           </p>
 
-          <h2>5. Externe Links</h2>
+          <h2>5. Google-Bewertungen über Trustindex</h2>
+          <p>
+            Um Bewertungen unserer Kunden von Google anzuzeigen, binden wir Widgets von Trustindex ein (Trustindex Kft.,
+            Ungarn). Das Widget wird erst geladen, wenn Sie zu der entsprechenden Stelle der Seite scrollen. Dabei wird Ihre
+            IP-Adresse an Trustindex übertragen, damit die Bewertungen ausgeliefert werden können. Rechtsgrundlage ist unser
+            berechtigtes Interesse an der Darstellung von Kundenbewertungen (Art. 6 Abs. 1 lit. f DSGVO).
+          </p>
+
+          <h2>6. Externe Links</h2>
           <p>
             Unsere Seiten verlinken auf Angebote Dritter, etwa ProvenExpert oder Datenblätter von Herstellern. Erst beim
             Klick auf einen solchen Link werden Daten an den jeweiligen Anbieter übertragen.
           </p>
 
-          <h2>6. Ihre Rechte</h2>
+          <h2>7. Ihre Rechte</h2>
           <p>
             Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit
             und Widerspruch. Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei

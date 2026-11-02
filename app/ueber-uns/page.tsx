@@ -52,7 +52,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <div className="relative aspect-[4/5] overflow-hidden bg-stein lg:col-span-6">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-stein lg:col-span-6">
           <Image src={IMG.mkg1251} alt="Autokran von Zeller Kranservice" fill priority sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
         </div>
       </section>
@@ -79,7 +79,7 @@ export default function Page() {
           <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-3 lg:grid-cols-5">
             {TEAM.map((t) => (
               <li key={t.name}>
-                <div className="relative aspect-[4/5] overflow-hidden bg-stein">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-stein">
                   <Image src={t.bild} alt={t.name} fill sizes="(min-width:1024px) 18vw, 45vw" className="object-cover" />
                 </div>
                 <p className="mt-3 font-semibold">{t.name}</p>

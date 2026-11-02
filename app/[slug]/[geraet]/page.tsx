@@ -7,6 +7,7 @@ import { einsatzbereiche } from "@/data/einsatzbereiche";
 import { kategorieBySlug, kategorieByUrlSlug } from "@/data/kategorien";
 import { projekteMitGeraet } from "@/data/projekte";
 import { GeraetCard, ProjektCard } from "@/components/cards";
+import { Trustindex } from "@/components/Trustindex";
 import { Breadcrumbs, CtaBand, FaqList, JsonLd, SectionHead } from "@/components/ui";
 import { SITE } from "@/lib/site";
 import { anfrageUrl, bereichUrl, geraetUrl } from "@/lib/links";
@@ -73,13 +74,13 @@ export default async function Page({ params }: PageProps<"/[slug]/[geraet]">) {
       <section className="border-b border-linie">
         <div className="container-z grid gap-10 py-10 md:py-14 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <div className="relative aspect-[4/3] overflow-hidden bg-stein">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stein">
               <Image src={g.bilder[0]} alt={`${g.name} von Zeller Kranservice`} fill priority sizes="(min-width:1024px) 58vw, 100vw" className="object-cover" />
             </div>
             {g.bilder.length > 1 && (
               <ul className="mt-3 grid grid-cols-3 gap-3 sm:grid-cols-4">
                 {g.bilder.slice(1, 9).map((b, i) => (
-                  <li key={b} className="relative aspect-[4/3] overflow-hidden bg-stein">
+                  <li key={b} className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stein">
                     <Image src={b} alt={`${g.name} im Einsatz, Bild ${i + 2}`} fill sizes="(min-width:1024px) 14vw, 30vw" className="object-cover" />
                   </li>
                 ))}
@@ -92,12 +93,12 @@ export default async function Page({ params }: PageProps<"/[slug]/[geraet]">) {
             </p>
             <h1 className="mt-2 text-4xl font-bold leading-[1.05] md:text-5xl">{g.name} mieten</h1>
             {!g.verfuegbar && (
-              <p className="mt-4 inline-block rounded-[2px] bg-stein px-3 py-1 text-sm font-semibold">Bald verfügbar</p>
+              <p className="mt-4 inline-block rounded-full bg-stein px-3 py-1 text-sm font-semibold">Bald verfügbar</p>
             )}
             <p className="mt-6 text-lg leading-relaxed text-schiefer">{g.beschreibung}</p>
 
             {g.verfuegbar && (
-              <dl className="mt-8 grid grid-cols-2 gap-px border border-linie bg-linie">
+              <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-linie bg-linie">
                 {g.kennzahlen.map((s) => (
                   <div key={s.label} className="bg-white p-4">
                     <dt className="text-sm text-schiefer">{s.label}</dt>
@@ -121,6 +122,7 @@ export default async function Page({ params }: PageProps<"/[slug]/[geraet]">) {
               {g.passtDurchTuer && <li>Passt durch Türen und Tore</li>}
               <li>Rückruf {SITE.rueckruf}</li>
             </ul>
+            <Trustindex art="button" className="mt-6" minHoehe="3rem" />
           </div>
         </div>
       </section>
@@ -176,7 +178,7 @@ export default async function Page({ params }: PageProps<"/[slug]/[geraet]">) {
                   <ul className="mt-4 flex flex-wrap gap-2">
                     {bereiche.map((b) => (
                       <li key={b.slug}>
-                        <Link href={bereichUrl(b.slug)} className="inline-block rounded-[3px] border border-linie px-3 py-1.5 text-sm font-medium hover:border-magenta-ink">
+                        <Link href={bereichUrl(b.slug)} className="inline-block rounded-xl border border-linie px-3 py-1.5 text-sm font-medium hover:border-magenta-ink">
                           {b.name}
                         </Link>
                       </li>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
+import { Trustindex } from "@/components/Trustindex";
 
 export const metadata: Metadata = {
   title: "Anfrage gesendet | Zeller Kranservice",
@@ -23,6 +24,10 @@ export default function Page() {
           </a>{" "}
           ({SITE.buerozeiten})
         </p>
+        <div className="mt-10 rounded-2xl bg-stein p-6">
+          <p className="text-center font-semibold">So bewerten uns unsere Kunden</p>
+          <Trustindex art="button" ausrichtung="mitte" className="mt-3" minHoehe="3rem" />
+        </div>
         <div className="mt-10 flex flex-wrap gap-3">
           <Link href="/ratgeber/" className="btn btn-secondary">
             Zum Ratgeber

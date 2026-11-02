@@ -59,7 +59,7 @@ export default async function Page({ params }: PageProps<"/einsatzbereiche/[bere
               </a>
             </div>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden bg-stein lg:col-span-6">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stein lg:col-span-6">
             <Image src={b.bild} alt={`${b.name} mit Kran von Zeller Kranservice`} fill priority sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
           </div>
         </div>

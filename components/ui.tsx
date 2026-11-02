@@ -155,7 +155,7 @@ export function CtaBand({
 export function Pill({ children, tone = "default" }: { children: ReactNode; tone?: "default" | "muster" }) {
   return (
     <span
-      className={`inline-flex items-center rounded-[2px] px-2 py-0.5 text-xs font-semibold ${
+      className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-semibold ${
         tone === "muster" ? "bg-white/90 text-bordeaux" : "bg-stein text-graphit"
       }`}
     >

@@ -91,7 +91,7 @@ export function ProjektSlider({ children, label }: { children: ReactNode[]; labe
           <button
             type="button"
             onClick={() => step(-1)}
-            className="grid h-11 w-11 place-items-center rounded-[3px] border border-white/40 text-white hover:bg-white/10"
+            className="grid h-11 w-11 place-items-center rounded-xl border border-white/40 text-white hover:bg-white/10"
           >
             <span className="sr-only">Vorheriges Projekt</span>
             <svg aria-hidden width="16" height="16" viewBox="0 0 16 16">
@@ -101,7 +101,7 @@ export function ProjektSlider({ children, label }: { children: ReactNode[]; labe
           <button
             type="button"
             onClick={() => step(1)}
-            className="grid h-11 w-11 place-items-center rounded-[3px] border border-white/40 text-white hover:bg-white/10"
+            className="grid h-11 w-11 place-items-center rounded-xl border border-white/40 text-white hover:bg-white/10"
           >
             <span className="sr-only">Nächstes Projekt</span>
             <svg aria-hidden width="16" height="16" viewBox="0 0 16 16">

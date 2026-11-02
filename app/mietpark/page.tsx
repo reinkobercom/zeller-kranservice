@@ -54,7 +54,7 @@ export default function MietparkPage() {
       <section className="bg-stein py-16 md:py-24">
         <div className="container-z">
           <SectionHead title="Welches Gerät passt?" intro="Die Kurzfassung. Ausführlich erklären wir es im Ratgeber." />
-          <ul className="mt-10 grid gap-px bg-linie md:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-linie bg-linie md:grid-cols-2 lg:grid-cols-4">
             {ENTSCHEIDUNG.map((e) => (
               <li key={e.frage} className="flex flex-col bg-white p-6">
                 <p className="text-schiefer">{e.frage}</p>

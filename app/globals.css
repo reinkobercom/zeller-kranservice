@@ -7,10 +7,11 @@
   --color-magenta-hover: #a8005c;
   --color-bordeaux: #7a0043; /* dunkle Flächen */
   --color-bordeaux-deep: #5a0032;
-  --color-graphit: #212428; /* Text, Footer */
-  --color-schiefer: #5b5f66; /* Sekundärtext */
-  --color-stein: #f4f4f5; /* ruhige Flächen */
-  --color-linie: #e2e2e6; /* Haarlinien */
+  --color-graphit: #2a2326; /* Text, Footer (warmes Dunkel) */
+  --color-schiefer: #6a5e62; /* Sekundärtext */
+  --color-stein: #f7f1ed; /* warme helle Flächen */
+  --color-rose: #fcf0f5; /* zarter Magenta-Ton für Akzentflächen */
+  --color-linie: #eadfd9; /* Haarlinien */
   --color-logo-gruen: #3db34a;
 
   --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
@@ -44,8 +45,8 @@
   h2,
   h3,
   .display {
-    font-stretch: 115%;
-    letter-spacing: -0.015em;
+    font-stretch: 104%;
+    letter-spacing: -0.02em;
     text-wrap: balance;
   }
   p {
@@ -54,7 +55,7 @@
   :focus-visible {
     outline: 3px solid var(--color-magenta);
     outline-offset: 3px;
-    border-radius: 2px;
+    border-radius: 6px;
   }
   ::selection {
     background: var(--color-magenta);
@@ -81,9 +82,9 @@
     justify-content: center;
     gap: 0.5rem;
     min-height: 3rem;
-    padding: 0.75rem 1.4rem;
+    padding: 0.75rem 1.6rem;
     font-weight: 600;
-    border-radius: 3px;
+    border-radius: 999px;
     transition:
       background-color 0.15s,
       color 0.15s,
@@ -98,12 +99,13 @@
     background: var(--color-magenta-hover);
   }
   .btn-secondary {
-    border: 1.5px solid var(--color-graphit);
+    border: 1.5px solid var(--color-linie);
+    background: #fff;
     color: var(--color-graphit);
   }
   .btn-secondary:hover {
-    background: var(--color-graphit);
-    color: #fff;
+    border-color: var(--color-magenta-ink);
+    color: var(--color-magenta-ink);
   }
   .btn-light {
     background: #fff;
@@ -210,4 +212,25 @@
 }
 .snap-row > * {
   scroll-snap-align: start;
+}
+
+/* Trustindex-Widgets ausrichten */
+.trustindex-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.trustindex-mitte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.trustindex-links > div,
+.trustindex-mitte > div {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.trustindex-mitte > div {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }

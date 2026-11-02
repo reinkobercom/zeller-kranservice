@@ -25,7 +25,7 @@ export default function Page() {
         />
 
         <Link href={artikelUrl(erster.slug)} className="group mt-12 grid gap-8 border-t border-linie pt-10 lg:grid-cols-2">
-          <div className="relative aspect-[16/10] overflow-hidden bg-stein">
+          <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-stein">
             <Image src={erster.bild} alt="" fill priority sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
           </div>
           <div className="self-center">
@@ -41,7 +41,7 @@ export default function Page() {
           {rest.map((a) => (
             <li key={a.slug} className="group">
               <Link href={artikelUrl(a.slug)} className="block">
-                <div className="relative aspect-[3/2] overflow-hidden bg-stein">
+                <div className="relative aspect-[3/2] overflow-hidden rounded-2xl bg-stein">
                   <Image src={a.bild} alt="" fill sizes="(min-width:768px) 30vw, 100vw" className="object-cover" />
                 </div>
                 <h2 className="mt-4 text-xl font-bold leading-snug group-hover:text-magenta-ink">{a.titel}</h2>

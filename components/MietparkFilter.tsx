@@ -49,7 +49,7 @@ export function MietparkFilter({ geraete, kategorien, cards }: Props) {
                 type="button"
                 aria-pressed={kat === k.slug}
                 onClick={() => setKat(k.slug)}
-                className={`rounded-[3px] border px-3 py-2 text-sm font-medium transition-colors ${
+                className={`rounded-xl border px-3 py-2 text-sm font-medium transition-colors ${
                   kat === k.slug ? "border-graphit bg-graphit text-white" : "border-linie hover:border-graphit"
                 }`}
               >
@@ -64,7 +64,7 @@ export function MietparkFilter({ geraete, kategorien, cards }: Props) {
             <select
               value={hoehe}
               onChange={(e) => setHoehe(Number(e.target.value))}
-              className="mt-2 block h-10 rounded-[3px] border border-linie bg-white px-3 font-normal"
+              className="mt-2 block h-10 rounded-xl border border-linie bg-white px-3 font-normal"
             >
               {HOEHEN.map((h) => (
                 <option key={h} value={h}>
