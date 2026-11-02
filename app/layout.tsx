@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Kran mieten bei Zeller Kranservice: Autokrane bis 52 m, Anhängerkrane, Minikran, Hubsteiger und Glashebegerät. Mit Kranführer, Planung und Genehmigung. Seit 2014, über 1.000 Einsätze pro Jahr.",
+    "Kran mieten bei Zeller Kranservice: Autokrane bis 53 m, Anhängerkrane, Minikran, Hubsteiger und Glashebegerät. Mit Kranführer, Planung und Genehmigung. Seit 2014, über 1.000 Einsätze pro Jahr.",
   openGraph: {
     type: "website",
     locale: "de_DE",

@@ -16,6 +16,7 @@ export const geraete: Geraet[] = [
       "Der MKG HMK 1302 hebt 1.200 kg auf 33,85 m Ausladung und erreicht rund 51 m Hakenhöhe. Teleskopierbarer Hubarm und variabler Knickarm machen ihn zum Spezialisten für Hallenbau, Dacharbeiten und Montage über Störkanten. Auf Wunsch mieten Sie ihn mit Arbeitsbühne.",
     hakenhoeheM: 51,
     lastText: "1,2 t bei 33,85 m",
+    anzahl: 2,
     reichweiteM: 40,
     kennzahlen: [
       { label: "Hakenhöhe", wert: "ca. 51 m" },
@@ -53,20 +54,20 @@ export const geraete: Geraet[] = [
     hersteller: "Klaas",
     modell: "K1003",
     name: "Klaas K1003",
-    kurz: "Unser höchster Autokran: 52,2 m Hakenhöhe und bis 6 t Last auf drei Achsen.",
+    kurz: "Unser höchster Autokran: 53 m Hakenhöhe und bis 6 t Last auf drei Achsen.",
     beschreibung:
-      "Der Klaas K1003 ist ein Dreiachser mit lenkbarer Hinterachse und erreicht 52,2 m Hakenhöhe. Er hebt bis 6 t. Der Ausleger aus Aluminium mit teleskopierbarer Spitze sorgt für große Reichweite, die lenkbare Hinterachse macht ihn trotz seiner Größe wendig.",
-    hakenhoeheM: 52.2,
+      "Der Klaas K1003 ist ein Dreiachser mit lenkbarer Hinterachse und erreicht 53 m Hakenhöhe. Er hebt bis 6 t. Der Ausleger aus Aluminium mit teleskopierbarer Spitze sorgt für große Reichweite, die lenkbare Hinterachse macht ihn trotz seiner Größe wendig.",
+    hakenhoeheM: 53,
     tragkraftT: 6,
     kennzahlen: [
-      { label: "Hakenhöhe", wert: "52,2 m" },
+      { label: "Hakenhöhe", wert: "53 m" },
       { label: "Hakenlast", wert: "3,0 / 6,0 t" },
       { label: "Ausfahrlänge", wert: "54 m" },
       { label: "Achsen", wert: "3, Hinterachse lenkbar" },
     ],
     specs: [
       { label: "Hakenlast (Standard / optional)", wert: "3,0 / 6,0 t" },
-      { label: "Hakenhöhe", wert: "52,2 m" },
+      { label: "Hakenhöhe", wert: "53 m" },
       { label: "Ausfahrlänge", wert: "54,00 m" },
       { label: "Ausleger bei 3.000 bis 1.500 kg", wert: "6,61 bis 15,45 m" },
       { label: "Auszug bei 350 kg", wert: "18,39 m" },

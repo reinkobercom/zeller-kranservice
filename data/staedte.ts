@@ -80,7 +80,7 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 180.000",
     luftlinieKm: 15,
     intro:
-      "Kran mieten in Hamm ist mit Zeller Kranservice unkompliziert, denn Werl liegt nur rund 15 km entfernt. Wir stellen Autokrane bis rund 52 m Hakenhöhe mit Kranführer sowie Minikrane und Arbeitsbühnen. Besichtigung, Planung und Genehmigung übernehmen wir.",
+      "Kran mieten in Hamm ist mit Zeller Kranservice unkompliziert, denn Werl liegt nur rund 15 km entfernt. Wir stellen Autokrane bis 53 m Hakenhöhe mit Kranführer sowie Minikrane und Arbeitsbühnen. Besichtigung, Planung und Genehmigung übernehmen wir.",
     lage:
       "Hamm ist eine weitläufige Stadt an Lippe und Datteln-Hamm-Kanal mit Bergbaugeschichte. In Ortsteilen wie Rhynern und Uentrop stehen viele Einfamilienhäuser mit Gärten. Daneben gibt es Gewerbe- und Industrieflächen mit Hallen, die regelmäßig erweitert oder saniert werden.",
     stadtteile: ["Hamm-Mitte", "Bockum-Hövel", "Heessen", "Herringen", "Pelkum", "Rhynern", "Uentrop"],
@@ -150,7 +150,7 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 590.000",
     luftlinieKm: 30,
     intro:
-      "Kran mieten in Dortmund: Zeller Kranservice ist von Werl aus über die A44 schnell im Dortmunder Stadtgebiet. Wir stellen Autokrane bis rund 52 m Hakenhöhe mit Kranführer, Minikrane für Innenhöfe und Arbeitsbühnen. Genehmigungen für Straßen in Dortmund beantragen wir für Sie.",
+      "Kran mieten in Dortmund: Zeller Kranservice ist von Werl aus über die A44 schnell im Dortmunder Stadtgebiet. Wir stellen Autokrane bis 53 m Hakenhöhe mit Kranführer, Minikrane für Innenhöfe und Arbeitsbühnen. Genehmigungen für Straßen in Dortmund beantragen wir für Sie.",
     lage:
       "Im Kreuzviertel und in der Innenstadt stehen viele Gründerzeit-Altbauten mit Hinterhöfen und wenig Stellfläche. Rund um den Phoenix-See in Hörde ist auf früherem Stahlwerksgelände ein Neubauquartier entstanden. In den Außenbezirken überwiegen Einfamilienhäuser, im Hafen- und Logistikbereich große Hallen.",
     stadtteile: ["Innenstadt", "Hörde", "Aplerbeck", "Brackel", "Hombruch", "Huckarde", "Eving", "Mengede"],
@@ -430,7 +430,7 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 365.000",
     luftlinieKm: 50,
     intro:
-      "Kran mieten in Bochum: Zeller Kranservice fährt von Werl aus über die A44 und A40 ins Bochumer Stadtgebiet. Wir stellen Autokrane bis rund 52 m Hakenhöhe mit Kranführer, Minikrane und Arbeitsbühnen. Besichtigung, Planung und Genehmigung übernehmen wir.",
+      "Kran mieten in Bochum: Zeller Kranservice fährt von Werl aus über die A44 und A40 ins Bochumer Stadtgebiet. Wir stellen Autokrane bis 53 m Hakenhöhe mit Kranführer, Minikrane und Arbeitsbühnen. Besichtigung, Planung und Genehmigung übernehmen wir.",
     lage:
       "In Ehrenfeld und rund um die Innenstadt stehen viele Altbauten mit Hinterhöfen und knappen Parkflächen. Typisch für Bochum sind auch Zechensiedlungen mit niedrigen Häusern und Gärten. Auf früheren Industrieflächen entstehen neue Gewerbe- und Wohnquartiere.",
     stadtteile: ["Wattenscheid", "Langendreer", "Ehrenfeld", "Weitmar", "Stiepel", "Querenburg", "Riemke", "Gerthe"],
@@ -800,7 +800,7 @@ export const staedte: Stadt[] = [
       {
         frage: "Welcher Kran eignet sich für einen Dachausbau in einem Leipziger Altbau?",
         antwort:
-          "Für Balken, Dachfenster und Material eignet sich ein Autokran wie der Klaas K1003 mit rund 52 m Hakenhöhe. Liegt die Baustelle im Hof, setzen wir den Minikran Jekko SPX532 ein. Wir planen den Hub nach Gewicht und Ausladung.",
+          "Für Balken, Dachfenster und Material eignet sich ein Autokran wie der Klaas K1003 mit 53 m Hakenhöhe. Liegt die Baustelle im Hof, setzen wir den Minikran Jekko SPX532 ein. Wir planen den Hub nach Gewicht und Ausladung.",
       },
       {
         frage: "Wer kümmert sich in Leipzig um die Genehmigung?",
@@ -957,7 +957,7 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 500.000",
     luftlinieKm: 80,
     intro:
-      "Kran mieten in Duisburg: Zeller Kranservice kommt aus dem rund 80 km entfernten Werl und plant die Anfahrt mit ein. Wir stellen Autokrane bis rund 52 m Hakenhöhe mit Kranführer, Minikrane und Arbeitsbühnen. Genehmigungen in Duisburg beantragen wir für Sie.",
+      "Kran mieten in Duisburg: Zeller Kranservice kommt aus dem rund 80 km entfernten Werl und plant die Anfahrt mit ein. Wir stellen Autokrane bis 53 m Hakenhöhe mit Kranführer, Minikrane und Arbeitsbühnen. Genehmigungen in Duisburg beantragen wir für Sie.",
     lage:
       "Duisburg liegt an Rhein und Ruhr, rund um Ruhrort prägen Hafen und Logistik die Stadt. Im Norden gibt es große Industrie- und Stahlstandorte mit Hallen. Dazu kommen Zechensiedlungen und dichte Altbauviertel, etwa in Neudorf und Duissern.",
     stadtteile: ["Ruhrort", "Homberg", "Rheinhausen", "Hamborn", "Marxloh", "Neudorf", "Duissern", "Walsum"],

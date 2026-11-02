@@ -22,7 +22,7 @@ const TEAM = [
 const FAKTEN = [
   ["Gegründet", `${SITE.gegruendet} von Dirk Zeller in Werl`],
   ["Einsätze", `${SITE.einsaetzeProJahr} pro Jahr`],
-  ["Flotte", "5 Autokrane, 12 Anhängerkrane, Minikran, Hubsteiger, Raupen- und Scherenbühne, Glashebegerät"],
+  ["Flotte", "6 Autokrane, 12 Anhängerkrane, Minikran, Hubsteiger, Raupen- und Scherenbühne, Glashebegerät"],
   ["Einsatzgebiet", "Deutschlandweit, Schwerpunkt NRW"],
   ["Leistungen", "Beratung, Baustellenbesichtigung, Einsatzplanung, Genehmigungen, Kraneinsatz mit Kranführer"],
   ["Rückruf", SITE.rueckruf],

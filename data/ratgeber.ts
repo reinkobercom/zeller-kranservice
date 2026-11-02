@@ -194,7 +194,7 @@ export const artikel: Artikel[] = [
           zeilen: [
             [
               "Autokran",
-              "bis rund 52 m Hakenhöhe",
+              "bis 53 m Hakenhöhe",
               "bis 10 t",
               "Lkw-Stellplatz mit Abstützfläche",
               "Hallenbau, Pool, Dachstuhl, Innenhof",
@@ -248,7 +248,7 @@ export const artikel: Artikel[] = [
         h2: "Wann ist ein Autokran die richtige Wahl?",
         absaetze: [
           "Ein Autokran ist richtig, wenn Lasten schwer sind oder weit gehoben werden müssen. Er steht auf der Straße oder einer befestigten Fläche und hebt über Gebäude hinweg.",
-          "Der MKG HMK 1302 ist unser Montagekran für Hallenbau und Dächer. Er erreicht ca. 51 m Hakenhöhe und arbeitet mit variabler Knickkante über Störkanten. Der Klaas K1003 kommt auf 52,2 m Hakenhöhe und hebt bis 6,0 t.",
+          "Der MKG HMK 1302 ist unser Montagekran für Hallenbau und Dächer. Er erreicht ca. 51 m Hakenhöhe und arbeitet mit variabler Knickkante über Störkanten. Der Klaas K1003 kommt auf 53 m Hakenhöhe und hebt bis 6,0 t.",
           "Für schwere Lasten eignet sich der MKG 1251 mit bis zu 10 t und knapp 45 m Hakenhöhe. Seine hydraulische Reichweite liegt bei 31,8 m.",
           "Wo es eng wird, hilft der kompakte MKG 582. Er erreicht bis 36,5 m Hakenhöhe und hebt im Nahbereich bis 9,65 t. Der Klaas K950 kommt auf 43,5 m und arbeitet mit Hybridantrieb, also elektrisch oder mit Diesel.",
           "Typische Einsätze für Autokrane sind Hallenbau, Pool, Dachstuhl und Material für Innenhöfe. Alle Autokrane kommen mit einem erfahrenen Kranführer. Steht der Kran auf der Straße, beantragen wir die nötigen Genehmigungen.",
@@ -295,7 +295,7 @@ export const artikel: Artikel[] = [
       {
         frage: "Welcher Kran kommt am höchsten?",
         antwort:
-          "Der Klaas K1003 erreicht 52,2 m Hakenhöhe. Der MKG HMK 1302 kommt auf ca. 51 m und arbeitet zusätzlich mit Knickausleger.",
+          "Der Klaas K1003 erreicht 53 m Hakenhöhe. Der MKG HMK 1302 kommt auf ca. 51 m und arbeitet zusätzlich mit Knickausleger.",
       },
       {
         frage: "Welches Gerät passt durch eine Tür?",

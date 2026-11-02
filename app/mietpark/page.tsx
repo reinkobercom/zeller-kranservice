@@ -12,7 +12,7 @@ import { anfrageUrl, geraetUrl } from "@/lib/links";
 export const metadata: Metadata = {
   title: "Mietpark: alle Krane und Bühnen im Vergleich | Zeller Kranservice",
   description:
-    "Alle Mietgeräte von Zeller Kranservice im Überblick: 5 Autokrane bis 52 m, 12 Anhängerkrane, Minikran, Hubsteiger, Raupen- und Scherenbühne, Glashebegerät. Mit Filter und Vergleich.",
+    "Alle Mietgeräte von Zeller Kranservice im Überblick: 6 Autokrane bis 53 m, 12 Anhängerkrane, Minikran, Hubsteiger, Raupen- und Scherenbühne, Glashebegerät. Mit Filter und Vergleich.",
   alternates: { canonical: "/mietpark/" },
 };
 

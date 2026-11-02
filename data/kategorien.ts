@@ -8,13 +8,13 @@ export const kategorien: Kategorie[] = [
     name: "Autokran",
     plural: "Autokrane",
     kurz: "Große Hakenhöhen, schnell aufgebaut, mit Kranführer",
-    kennzahl: "bis 52 m Hakenhöhe",
+    kennzahl: "bis 53 m Hakenhöhe",
     metaTitle: "Autokran mieten mit Kranführer | Zeller Kranservice",
     metaDescription:
-      "Autokran mieten bis 52 m Hakenhöhe und 10 t Last: fünf Modelle von MKG und Klaas, mit erfahrenem Kranführer, Planung und Genehmigung. Deutschlandweit.",
+      "Autokran mieten bis 53 m Hakenhöhe und 10 t Last: sechs Autokrane in fünf Modellen von MKG und Klaas, mit erfahrenem Kranführer, Planung und Genehmigung. Deutschlandweit.",
     h1: "Autokran mieten",
     intro:
-      "Bei Zeller Kranservice mieten Sie Autokrane von MKG und Klaas mit bis zu 52 m Hakenhöhe und bis zu 10 t Tragkraft. Jeder Autokran kommt mit erfahrenem Kranführer. Wir besichtigen die Baustelle, planen den Einsatz und kümmern uns um die Genehmigungen.",
+      "Bei Zeller Kranservice mieten Sie Autokrane von MKG und Klaas mit bis zu 53 m Hakenhöhe und bis zu 10 t Tragkraft. Jeder Autokran kommt mit erfahrenem Kranführer. Wir besichtigen die Baustelle, planen den Einsatz und kümmern uns um die Genehmigungen.",
     wannSinnvoll: [
       "Lasten müssen hoch oder weit über Gebäude, Hallen oder Störkanten gehoben werden",
       "Der Kran soll in kurzer Zeit aufgebaut sein und danach direkt weiterfahren",
@@ -27,7 +27,7 @@ export const kategorien: Kategorie[] = [
       {
         frage: "Wie hoch kann ein Autokran von Zeller heben?",
         antwort:
-          "Unser Klaas K1003 erreicht 52,2 m Hakenhöhe, der MKG HMK 1302 rund 51 m. Für kleinere Einsätze haben wir Modelle mit 36,5 m bis 45 m Hakenhöhe.",
+          "Unser Klaas K1003 erreicht 53 m Hakenhöhe, der MKG HMK 1302 rund 51 m. Für kleinere Einsätze haben wir Modelle mit 36,5 m bis 45 m Hakenhöhe.",
       },
       {
         frage: "Wie viel Platz braucht ein Autokran?",

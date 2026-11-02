@@ -12,7 +12,7 @@ export function GET() {
   const L = (path: string) => SITE.url + path;
   const text = `# ${SITE.name}
 
-> Kranvermietung mit Kranführer aus Werl (NRW), deutschlandweit im Einsatz. Gegründet ${SITE.gegruendet} von ${SITE.inhaber}, ${SITE.einsaetzeProJahr} Kraneinsätze pro Jahr. Eigene Flotte: Autokrane bis rund 52 m Hakenhöhe und bis 10 t, 12 Anhängerkrane (auch ohne Fahrer mietbar), Minikran (77 cm breit), Hubsteiger (26 m), Raupen- und Scherenbühne, Glashebegerät (600 kg). Beratung, Baustellenbesichtigung, Planung und Genehmigungen inklusive. Rückruf ${SITE.rueckruf}.
+> Kranvermietung mit Kranführer aus Werl (NRW), deutschlandweit im Einsatz. Gegründet ${SITE.gegruendet} von ${SITE.inhaber}, ${SITE.einsaetzeProJahr} Kraneinsätze pro Jahr. Eigene Flotte: Autokrane bis 53 m Hakenhöhe und bis 10 t, 12 Anhängerkrane (auch ohne Fahrer mietbar), Minikran (77 cm breit), Hubsteiger (26 m), Raupen- und Scherenbühne, Glashebegerät (600 kg). Beratung, Baustellenbesichtigung, Planung und Genehmigungen inklusive. Rückruf ${SITE.rueckruf}.
 
 Kontakt: ${SITE.strasse}, ${SITE.plz} ${SITE.ort}, Telefon ${SITE.telefon}, ${SITE.email}. Büro: ${SITE.buerozeiten}.
 Preise: individuelles Angebot, keine Pauschalpreise veröffentlicht.

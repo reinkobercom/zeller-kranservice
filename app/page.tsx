@@ -19,7 +19,7 @@ import type { Faq } from "@/lib/types";
 export const metadata: Metadata = {
   title: "Kran mieten mit Kranführer, deutschlandweit | Zeller Kranservice",
   description:
-    "Kran mieten bei Zeller Kranservice aus Werl: Autokrane bis 52 m, Anhängerkrane, Minikran, Hubsteiger, Arbeitsbühnen. Mit Kranführer, Planung und Genehmigung. Rückruf in 24 h.",
+    "Kran mieten bei Zeller Kranservice aus Werl: Autokrane bis 53 m, Anhängerkrane, Minikran, Hubsteiger, Arbeitsbühnen. Mit Kranführer, Planung und Genehmigung. Rückruf in 24 h.",
   alternates: { canonical: "/" },
 };
 
@@ -114,7 +114,7 @@ export default function Home() {
               Kran mieten. Mit Kranführer, Planung und Genehmigung.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
-              Vom Minikran, der durch Türen passt, bis zum Autokran mit 52 m Hakenhöhe. Seit {SITE.gegruendet} mit
+              Vom Minikran, der durch Türen passt, bis zum Autokran mit 53 m Hakenhöhe. Seit {SITE.gegruendet} mit
               eigener Flotte und eigenen Kranführern, {SITE.einsaetzeProJahr} Einsätze im Jahr.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -324,7 +324,7 @@ export default function Home() {
               {[
                 ["Gegründet", `${SITE.gegruendet} in Werl`],
                 ["Einsätze pro Jahr", SITE.einsaetzeProJahr],
-                ["Geräte", "12 Anhängerkrane, 5 Autokrane, Minikran, Hubsteiger, Bühnen, Glashebegerät"],
+                ["Geräte", "12 Anhängerkrane, 6 Autokrane, Minikran, Hubsteiger, Bühnen, Glashebegerät"],
                 ["Einsatzgebiet", "Deutschlandweit, Schwerpunkt NRW"],
                 ["Genehmigungen", "beantragen wir für Sie"],
               ].map(([k, v]) => (

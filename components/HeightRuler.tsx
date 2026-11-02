@@ -6,7 +6,7 @@ const MAX = 55;
 type Mark = { label: string; wert: string; bis: number; von?: number; href: string };
 
 const MARKS: Mark[] = [
-  { label: "Autokrane", wert: "bis 52 m", von: 36.5, bis: 52.2, href: "/autokran-mieten/" },
+  { label: "Autokrane", wert: "bis 53 m", von: 36.5, bis: 53, href: "/autokran-mieten/" },
   { label: "Anhängerkran", wert: "30 m", bis: 29.8, href: "/anhaengerkran-mieten/" },
   { label: "Hubsteiger", wert: "26 m", bis: 26, href: "/hubsteiger-mieten/" },
   { label: "Minikran", wert: "17 m", bis: 17.3, href: "/minikran-mieten/" },
