@@ -52,19 +52,20 @@ export const kategorien: Kategorie[] = [
     urlSlug: "anhaengerkran-mieten",
     name: "Anhängerkran",
     plural: "Anhängerkrane",
-    kurz: "Kompakt, mit oder ohne Kranführer, ideal für Dachdecker",
+    kurz: "Deutschlandweit, mit Hol- und Bringservice, auch ohne Kranführer",
     kennzahl: "12 Geräte, knapp 30 m",
-    metaTitle: "Anhängerkran mieten, auch ohne Fahrer | Zeller Kranservice",
+    metaTitle: "Anhängerkran mieten deutschlandweit, mit Lieferung | Zeller",
     metaDescription:
-      "Anhängerkran mieten: 12 Klaas-Anhängerkrane mit knapp 30 m Hakenhöhe und 1,5 t Last, auch elektrisch. Mit oder ohne Kranführer, ideal für Dach und Garten.",
+      "Anhängerkran mieten deutschlandweit: 12 Klaas-Anhängerkrane, knapp 30 m Hakenhöhe, 1,5 t Last. Mit Hol- und Bringservice, mit oder ohne Kranführer.",
     h1: "Anhängerkran mieten",
     intro:
-      "Zeller Kranservice vermietet 12 Anhängerkrane von Klaas mit knapp 30 m Hakenhöhe und bis zu 1,5 t Hakenlast, darunter zwei elektrische Modelle. Anhängerkrane mieten Sie bei uns mit oder ohne Kranführer. Sie wiegen nur 3,5 t und passen auf enge Baustellen.",
+      "Zeller Kranservice vermietet 12 Anhängerkrane von Klaas mit knapp 30 m Hakenhöhe und bis zu 1,5 t Hakenlast, darunter zwei elektrische Modelle. Anhängerkrane vermieten wir deutschlandweit, mit oder ohne Kranführer. Mit unserem Hol- und Bringservice stellen wir den Kran auf Ihrer Baustelle ab und holen ihn nach dem Einsatz wieder ab. Sie wiegen nur 3,5 t und passen auf enge Baustellen.",
     wannSinnvoll: [
       "Dachdeckerarbeiten, Dachsanierung und Material aufs Dach bringen",
       "Enge Baustellen und Einfahrten, auf denen ein Autokran keinen Platz hat",
       "Kleinere Bauprojekte, Garten- und Landschaftsbau",
       "Längere Einsätze über mehrere Tage, bei denen Sie selbst bedienen möchten",
+      "Baustellen in ganz Deutschland: Wir bringen den Kran und holen ihn wieder ab",
     ],
     mitFahrer:
       "Anhängerkrane gibt es bei uns mit erfahrenem Kranführer oder zur Selbstbedienung, wenn Sie oder Ihr Team die nötige Qualifikation mitbringen.",
@@ -73,6 +74,11 @@ export const kategorien: Kategorie[] = [
         frage: "Kann ich einen Anhängerkran ohne Kranführer mieten?",
         antwort:
           "Ja. Anhängerkrane vermieten wir auch ohne Fahrer. Wer den Kran bedient, braucht die entsprechende Qualifikation. Fragen Sie uns gern, was Sie dafür nachweisen müssen.",
+      },
+      {
+        frage: "Liefern Sie den Anhängerkran auch zu mir?",
+        antwort:
+          "Ja, deutschlandweit. Mit unserem Hol- und Bringservice bringen wir den Anhängerkran zu Ihrer Baustelle und holen ihn nach dem Einsatz wieder ab. Ein eigenes Zugfahrzeug brauchen Sie dafür nicht.",
       },
       {
         frage: "Was kann ein Anhängerkran heben?",

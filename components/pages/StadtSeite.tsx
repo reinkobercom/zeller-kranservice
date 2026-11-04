@@ -38,6 +38,13 @@ export function StadtSeite({ s }: { s: Stadt }) {
           <div className="lg:col-span-7">
             <h1 className="text-4xl font-bold leading-[1.05] md:text-6xl">Kran mieten in {s.name}</h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-schiefer">{s.intro}</p>
+            <p className="mt-5 max-w-2xl rounded-2xl bg-rose px-5 py-4 leading-relaxed">
+              <strong>Anhängerkran gesucht?</strong> Mit unserem Hol- und Bringservice bringen wir ihn zu Ihrer Baustelle
+              in {s.name} und holen ihn nach dem Einsatz wieder ab.{" "}
+              <Link href="/anhaengerkran-mieten/" className="link font-semibold">
+                Zu den Anhängerkranen
+              </Link>
+            </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href={anfrageUrl({ quelle })} className="btn btn-primary">
                 Kran in {s.name} anfragen

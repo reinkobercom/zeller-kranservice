@@ -151,8 +151,8 @@ export const einsatzbereiche: Einsatzbereich[] = [
           "Ja. Das Glashebegerät Jekko MPK06 arbeitet mit Elektromotor und ist damit für Innenräume geeignet. Es hebt bis 600 kg.",
       },
     ],
-    bild: IMG.minikranGlas1,
-    galerie: [IMG.minikranSchaufenster, IMG.minikranScheibe, IMG.glasmontageTeam, IMG.minikranScherenbuehne, IMG.glasmontageVordach, IMG.minikranGlas3],
+    bild: IMG.minikranGlas3,
+    galerie: [IMG.minikranSchaufenster, IMG.minikranScheibe, IMG.minikranGlas4, IMG.minikranGarten, IMG.minikranHof2, IMG.minikranGlas2],
   },
   {
     slug: "wintergarten",

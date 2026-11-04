@@ -56,7 +56,7 @@ const FAQ: Faq[] = [
   {
     frage: "Mieten Sie Krane mit Kranführer?",
     antwort:
-      "Ja. Autokrane, Minikran und Hubsteiger kommen mit eigenem Kranführer bzw. Bediener. Anhängerkrane können Sie auch ohne Fahrer mieten.",
+      "Ja. Autokrane, Minikran und Hubsteiger kommen mit eigenem Kranführer bzw. Bediener. Anhängerkrane können Sie auch ohne Fahrer mieten, deutschlandweit mit Hol- und Bringservice.",
   },
   {
     frage: "In welchem Gebiet ist Zeller Kranservice im Einsatz?",

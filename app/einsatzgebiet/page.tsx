@@ -38,6 +38,11 @@ const FAQ: Faq[] = [
       "Ja. Unser Firmensitz ist in Werl, wir übernehmen aber Einsätze in ganz Deutschland. Je weiter der Einsatzort entfernt ist, desto früher sollten Sie anfragen.",
   },
   {
+    frage: "Bringen Sie Anhängerkrane auch in andere Bundesländer?",
+    antwort:
+      "Ja. Anhängerkrane vermieten wir deutschlandweit, mit oder ohne Kranführer. Mit unserem Hol- und Bringservice liefern wir den Kran auf Ihre Baustelle und holen ihn nach dem Einsatz wieder ab.",
+  },
+  {
     frage: "Kostet ein Einsatz weiter weg mehr?",
     antwort:
       "Die Anfahrt ist Teil des Angebots. Bei längeren Projekten oder mehreren Einsätzen in einer Region lässt sich die Anreise oft bündeln. Wir besprechen das mit Ihnen.",

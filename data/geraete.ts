@@ -210,7 +210,7 @@ export const geraete: Geraet[] = [
     name: "Klaas K21-30 RS",
     kurz: "Der Allrounder auf dem Anhänger: 1,5 t Last, knapp 30 m Hakenhöhe, 3,5 t Gesamtgewicht.",
     beschreibung:
-      "Der Klaas K21-30 RS wiegt nur 3,5 t und hebt bis 1,5 t. Seitlich schafft er noch 250 kg auf 21 m. Dank Rangierantrieb lässt er sich auf der Baustelle ohne Zugfahrzeug in Position bringen. Sie mieten ihn mit Kranführer oder zur Selbstbedienung.",
+      "Der Klaas K21-30 RS wiegt nur 3,5 t und hebt bis 1,5 t. Seitlich schafft er noch 250 kg auf 21 m. Dank Rangierantrieb lässt er sich auf der Baustelle ohne Zugfahrzeug in Position bringen. Sie mieten ihn deutschlandweit mit Kranführer oder zur Selbstbedienung, auf Wunsch mit Hol- und Bringservice.",
     anzahl: 12,
     hakenhoeheM: 29.8,
     tragkraftT: 1.5,
@@ -235,6 +235,7 @@ export const geraete: Geraet[] = [
       "12 Anhängerkrane im Bestand: 8 × 21/30, 2 × 23/33, 2 × elektrisch",
       "Rangierantrieb",
       "Mit oder ohne Kranführer mietbar",
+      "Hol- und Bringservice deutschlandweit",
     ],
     zubehoer: ["Ziegelzange", "Ziegelmaxe"],
     datenblatt: "https://klaas.com/wp-content/uploads/procuct-sheet-k21-30.pdf",

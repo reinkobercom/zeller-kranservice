@@ -89,8 +89,6 @@ export const IMG = {
   minikranScheibe: "/bilder/neu/jekko-spx532-glasscheibe-einsetzen.jpg",
   minikranSchaufenster: "/bilder/neu/jekko-spx532-schaufenster-glas.jpg",
   minikranLastanzeige: "/bilder/neu/jekko-spx532-lastanzeige.jpg",
-  glasmontageTeam: "/bilder/neu/glasmontage-team-scherenbuehne.jpg",
-  glasmontageVordach: "/bilder/neu/glasmontage-unter-vordach.jpg",
   mkg1251Fahrerhaus: "/bilder/neu/mkg-1251-beast-fahrerhaus.jpg",
   mkg1251Drohne: "/bilder/neu/mkg-1251-hallenbau-drohne.jpg",
   mkg1251Draufsicht: "/bilder/neu/mkg-1251-hallenbau-draufsicht.jpg",
