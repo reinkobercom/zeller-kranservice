@@ -20,7 +20,7 @@ import { TelefonIcon } from "@/components/icons";
 export const metadata: Metadata = {
   title: "Kran mieten mit Kranführer, deutschlandweit | Zeller Kranservice",
   description:
-    "Kran mieten bei Zeller Kranservice aus Werl: Autokrane bis 53 m, Anhängerkrane, Minikran, Hubsteiger, Arbeitsbühnen. Mit Kranführer, Planung und Genehmigung. Rückruf in 24 h.",
+    "Kran mieten bei Zeller Kranservice aus Werl: Autokrane bis 53 m, Anhängerkrane, Minikran, Hubsteiger, Glashebegerät. Mit Kranführer, Planung und Genehmigung. Rückruf in 24 h.",
   alternates: { canonical: "/" },
 };
 
@@ -165,7 +165,7 @@ export default function Home() {
                 Weiß ich noch nicht, bitte beraten
               </Link>
             </div>
-            <ul className="grid grid-cols-2 gap-px bg-linie sm:grid-cols-3 lg:grid-cols-6">
+            <ul className="grid grid-cols-2 gap-px bg-linie sm:grid-cols-3 lg:grid-cols-5">
               {kategorien.map((k) => (
                 <li key={k.slug} className="bg-white">
                   <Link
@@ -183,6 +183,16 @@ export default function Home() {
                   </Link>
                 </li>
               ))}
+              {/* Füllt das Raster auf Handy und Tablet (2 bzw. 3 Spalten) */}
+              <li className="bg-white lg:hidden">
+                <Link
+                  href={anfrageUrl({ quelle: "startseite-geraetewahl-beratung" })}
+                  className="group flex h-full flex-col justify-between gap-6 px-5 py-5 transition-colors hover:bg-stein md:px-6"
+                >
+                  <span className="text-sm text-schiefer">Wir beraten Sie</span>
+                  <span className="text-lg font-semibold text-magenta-ink">Weiß ich noch nicht</span>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -5,7 +5,6 @@ export type KategorieSlug =
   | "anhaengerkran"
   | "minikran"
   | "hubsteiger"
-  | "arbeitsbuehne"
   | "glashebegeraet";
 
 /** Eine Gerätekategorie, z. B. Autokran. URL: /{urlSlug}/ */

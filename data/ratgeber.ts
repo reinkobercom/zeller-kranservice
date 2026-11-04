@@ -149,7 +149,6 @@ export const artikel: Artikel[] = [
       "anhaengerkran",
       "minikran",
       "hubsteiger",
-      "arbeitsbuehne",
       "glashebegeraet",
     ],
     einsatzbereiche: ["pool-einheben", "hallenbau", "dachdecker"],
@@ -160,7 +159,7 @@ export const artikel: Artikel[] = [
     titel: "Welcher Kran für welches Projekt? Die Entscheidungshilfe",
     metaTitle: "Welcher Kran für welches Projekt? | Zeller Kranservice",
     metaDescription:
-      "Autokran, Anhängerkran, Minikran, Hubsteiger, Arbeitsbühne oder Glashebegerät? Unser Vergleich hilft Ihnen, das passende Gerät zu finden.",
+      "Autokran, Anhängerkran, Minikran, Hubsteiger oder Glashebegerät? Unser Vergleich hilft Ihnen, das passende Gerät zu finden.",
     antwort:
       "Welcher Kran passt, entscheiden vor allem Gewicht der Last, benötigte Höhe und verfügbarer Platz. Für schwere Lasten und große Höhen ist ein Autokran richtig, für enge Gebäude ein Minikran. Für Arbeiten in der Höhe ohne Last eignen sich Hubsteiger und Arbeitsbühnen.",
     veroeffentlicht: "2026-10-26",
@@ -221,20 +220,6 @@ export const artikel: Artikel[] = [
               "Fassade, Dachrinne, Baumpflege, Wartung",
             ],
             [
-              "Raupenbühne",
-              "18 m Arbeitshöhe",
-              "250 kg Korblast",
-              "fährt durch Türen, ab 2,9 t",
-              "Innenräume, Hallen, Kirchen, unebenes Gelände",
-            ],
-            [
-              "Scherenbühne",
-              "10 m Arbeitshöhe",
-              "300 kg / 2 Personen",
-              "kompakt, ebener Boden",
-              "Decken, Installation, Hallenarbeiten",
-            ],
-            [
               "Glashebegerät",
               "ca. 4 m Hakenhöhe",
               "bis 600 kg",
@@ -275,13 +260,11 @@ export const artikel: Artikel[] = [
         ],
       },
       {
-        h2: "Hubsteiger oder Arbeitsbühne – was ist der Unterschied?",
+        h2: "Wann ist der Hubsteiger die richtige Wahl?",
         absaetze: [
-          "Hubsteiger und Arbeitsbühnen heben Personen, keine Lasten. Sie eignen sich für Arbeiten an Fassaden, Decken, Dachrinnen oder Bäumen.",
-          "Der Unterschied liegt vor allem im Einsatzort. Ein Hubsteiger fährt auf der Straße und arbeitet meist außen. Arbeitsbühnen sind kompakter und für Hallen, Innenräume oder unebenes Gelände gedacht.",
+          "Ein Hubsteiger hebt Personen, keine Lasten. Er eignet sich für Arbeiten an Fassaden, Dachrinnen, Traufen oder Bäumen. Er fährt auf der Straße an und arbeitet von außen.",
           "Der Ruthmann TBR 260 erreicht 26 m Arbeitshöhe und bis 17 m seitliche Reichweite. Er sitzt auf einem 3,5-t-Lkw und ist schnell einsatzbereit. Der Korb trägt 250 kg.",
           "Die seitliche Reichweite ist oft wichtiger als die Höhe. Sie bestimmt, ob der Korb über Vorgärten, Carports oder Bäume hinweg an die Fassade kommt.",
-          "Für Innenräume eignen sich Raupen- und Scherenbühne. Die Raupenbühne Almac B1890 erreicht 18 m und fährt durch Türen. Sie war bereits in einer Kirche im Einsatz. Die Scherenbühne Almac BIBI 1090 bietet 10 m Arbeitshöhe für zwei Personen.",
           "Müssen Sie neben Personen auch schwere Teile in die Höhe bringen? Dann kombinieren Sie besser Kran und Bühne. Den MKG HMK 1302 können Sie zum Beispiel mit Arbeitsbühne mieten.",
         ],
       },
@@ -300,7 +283,7 @@ export const artikel: Artikel[] = [
       {
         frage: "Welches Gerät passt durch eine Tür?",
         antwort:
-          "Der Minikran Jekko SPX532, das Glashebegerät Jekko MPK06 und die Raupenbühne Almac B1890 passen durch viele Türen. Wir prüfen die Maße vorab.",
+          "Der Minikran Jekko SPX532 und das Glashebegerät Jekko MPK06 passen durch viele Türen. Wir prüfen die Maße vorab.",
       },
       {
         frage: "Ich bin unsicher. Wie finde ich das richtige Gerät?",
@@ -313,7 +296,6 @@ export const artikel: Artikel[] = [
       "anhaengerkran",
       "minikran",
       "hubsteiger",
-      "arbeitsbuehne",
       "glashebegeraet",
     ],
     einsatzbereiche: ["hallenbau", "glasmontage", "dachdecker", "galabau", "fenstereinbau"],
@@ -546,10 +528,8 @@ export const artikel: Artikel[] = [
       {
         h2: "Was ist mit Arbeiten in Innenräumen?",
         absaetze: [
-          "Für Hallen, Foyers oder Kirchen eignen sich Arbeitsbühnen. Sie sind kompakt und belasten den Boden weniger als ein Innengerüst.",
-          "Die Raupenbühne Almac B1890 erreicht 18 m Arbeitshöhe bei 250 kg Korblast. Sie fährt durch Türen und war bereits in einer Kirche im Einsatz. Die Scherenbühne Almac BIBI 1090 bietet 10 m Arbeitshöhe für 300 kg oder zwei Personen. Sie arbeitet mit Hybridantrieb.",
-          "Gerade bei Deckenarbeiten in großen Räumen sparen Sie so den Auf- und Abbau eines Raumgerüsts. Der Raum bleibt zudem länger nutzbar, weil die Bühne nach der Arbeit sofort wieder hinausfährt.",
-          "Prüfen Sie vorab Türbreiten, Bodenbelastung und Hindernisse im Raum. Wir klären mit Ihnen, welche Bühne passt und ob der Boden geschützt werden muss.",
+          "Der Hubsteiger ist für Arbeiten von außen gedacht. In Hallen, Foyers oder Kirchen kommt er nicht zum Einsatz.",
+          "Müssen in Innenräumen Lasten bewegt werden, etwa Glasscheiben, Technik oder Stahlteile, passen unser Minikran Jekko SPX532 und das Glashebegerät Jekko MPK06 durch viele Türen. Wir prüfen vorab Türbreiten, Bodenbelastung und Hindernisse im Raum.",
         ],
       },
       {
@@ -580,7 +560,7 @@ export const artikel: Artikel[] = [
       {
         frage: "Kann ich den Hubsteiger auch in Innenräumen nutzen?",
         antwort:
-          "Der Hubsteiger ist für außen gedacht. Für innen eignen sich Raupenbühne und Scherenbühne, die durch Türen passen.",
+          "Nein, der Hubsteiger ist für Arbeiten von außen gedacht. Für Lasten in Innenräumen eignen sich unser Minikran und das Glashebegerät, die durch Türen passen.",
       },
       {
         frage: "Ist ein Hubsteiger für eine ganze Fassadensanierung geeignet?",
@@ -588,7 +568,7 @@ export const artikel: Artikel[] = [
           "Bei großen Flächen und langer Dauer ist ein Gerüst meist praktischer. Der Hubsteiger lohnt sich für punktuelle Arbeiten.",
       },
     ],
-    kategorien: ["hubsteiger", "arbeitsbuehne"],
+    kategorien: ["hubsteiger"],
     einsatzbereiche: ["geruestbau", "fenstereinbau"],
     bild: IMG.hubsteiger,
   },

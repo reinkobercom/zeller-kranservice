@@ -24,8 +24,13 @@ const nextConfig: NextConfig = {
       { source: "/kontakt-neu", destination: "/kontakt/", permanent: true },
       { source: "/einsatzzweck", destination: "/einsatzbereiche/", permanent: true },
       { source: "/datenblaetter", destination: "/mietpark/", permanent: true },
-      { source: "/raupenbuehne-mieten", destination: "/arbeitsbuehne-mieten/raupenbuehne/", permanent: true },
-      { source: "/scherenbuehne-mieten", destination: "/arbeitsbuehne-mieten/scherenbuehne/", permanent: true },
+      // Raupen- und Scherenbühne nicht mehr im Mietpark (Nov. 2026)
+      { source: "/raupenbuehne-mieten", destination: "/hubsteiger-mieten/", permanent: true },
+      { source: "/scherenbuehne-mieten", destination: "/hubsteiger-mieten/", permanent: true },
+      { source: "/arbeitsbuehne-mieten", destination: "/hubsteiger-mieten/", permanent: true },
+      { source: "/arbeitsbuehne-mieten/:path*", destination: "/hubsteiger-mieten/", permanent: true },
+      { source: "/projekte/soest-raupenbuehne-kirche", destination: "/projekte/", permanent: true },
+      { source: "/projekte/essen-hallendecke-scherenbuehne", destination: "/projekte/", permanent: true },
       // WordPress-Reste
       { source: "/feed", destination: "/", permanent: true },
       { source: "/wp-admin/:path*", destination: "/", permanent: false },

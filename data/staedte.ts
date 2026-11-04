@@ -10,7 +10,7 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 31.000",
     luftlinieKm: 0,
     intro:
-      "Kran mieten in Werl heißt bei uns: kürzeste Wege, denn hier ist unser Firmensitz in der Runtestraße 34. Von Werl aus stellen wir Autokrane, Minikrane und Arbeitsbühnen bereit, auf Wunsch mit erfahrenem Kranführer. Für Einsätze im Stadtgebiet sind wir besonders schnell vor Ort.",
+      "Kran mieten in Werl heißt bei uns: kürzeste Wege, denn hier ist unser Firmensitz in der Runtestraße 34. Von Werl aus stellen wir Autokrane, Minikrane und Hubsteiger bereit, auf Wunsch mit erfahrenem Kranführer. Für Einsätze im Stadtgebiet sind wir besonders schnell vor Ort.",
     lage:
       "Werl hat eine kompakte Altstadt rund um die Wallfahrtsbasilika mit engen Gassen und dicht stehenden Häusern. In den Ortsteilen überwiegen Einfamilienhäuser mit Gärten, oft nur über schmale Zufahrten erreichbar. Dazu kommen Gewerbeflächen in der Nähe von A44 und A445 mit Hallen und Lagerbauten.",
     stadtteile: ["Büderich", "Westönnen", "Hilbeck", "Holtum", "Sönnern", "Budberg", "Mawicke"],
@@ -80,7 +80,7 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 180.000",
     luftlinieKm: 15,
     intro:
-      "Kran mieten in Hamm ist mit Zeller Kranservice unkompliziert, denn Werl liegt nur rund 15 km entfernt. Wir stellen Autokrane bis 53 m Hakenhöhe mit Kranführer sowie Minikrane und Arbeitsbühnen. Besichtigung, Planung und Genehmigung übernehmen wir.",
+      "Kran mieten in Hamm ist mit Zeller Kranservice unkompliziert, denn Werl liegt nur rund 15 km entfernt. Wir stellen Autokrane bis 53 m Hakenhöhe mit Kranführer sowie Minikrane und Hubsteiger. Besichtigung, Planung und Genehmigung übernehmen wir.",
     lage:
       "Hamm ist eine weitläufige Stadt an Lippe und Datteln-Hamm-Kanal mit Bergbaugeschichte. In Ortsteilen wie Rhynern und Uentrop stehen viele Einfamilienhäuser mit Gärten. Daneben gibt es Gewerbe- und Industrieflächen mit Hallen, die regelmäßig erweitert oder saniert werden.",
     stadtteile: ["Hamm-Mitte", "Bockum-Hövel", "Heessen", "Herringen", "Pelkum", "Rhynern", "Uentrop"],
@@ -150,7 +150,7 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 590.000",
     luftlinieKm: 30,
     intro:
-      "Kran mieten in Dortmund: Zeller Kranservice ist von Werl aus über die A44 schnell im Dortmunder Stadtgebiet. Wir stellen Autokrane bis 53 m Hakenhöhe mit Kranführer, Minikrane für Innenhöfe und Arbeitsbühnen. Genehmigungen für Straßen in Dortmund beantragen wir für Sie.",
+      "Kran mieten in Dortmund: Zeller Kranservice ist von Werl aus über die A44 schnell im Dortmunder Stadtgebiet. Wir stellen Autokrane bis 53 m Hakenhöhe mit Kranführer, Minikrane für Innenhöfe und Hubsteiger. Genehmigungen für Straßen in Dortmund beantragen wir für Sie.",
     lage:
       "Im Kreuzviertel und in der Innenstadt stehen viele Gründerzeit-Altbauten mit Hinterhöfen und wenig Stellfläche. Rund um den Phoenix-See in Hörde ist auf früherem Stahlwerksgelände ein Neubauquartier entstanden. In den Außenbezirken überwiegen Einfamilienhäuser, im Hafen- und Logistikbereich große Hallen.",
     stadtteile: ["Innenstadt", "Hörde", "Aplerbeck", "Brackel", "Hombruch", "Huckarde", "Eving", "Mengede"],
@@ -220,12 +220,12 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 68.000",
     luftlinieKm: 35,
     intro:
-      "Kran mieten in Lippstadt: Zeller Kranservice kommt aus Werl, rund 35 km Luftlinie entfernt. Wir stellen Autokrane mit Kranführer, Anhängerkrane und Arbeitsbühnen. Planung und Genehmigungen übernehmen wir für Sie.",
+      "Kran mieten in Lippstadt: Zeller Kranservice kommt aus Werl, rund 35 km Luftlinie entfernt. Wir stellen Autokrane mit Kranführer, Anhängerkrane und Hubsteiger. Planung und Genehmigungen übernehmen wir für Sie.",
     lage:
       "Lippstadt liegt flach an der Lippe, mehrere Wasserläufe ziehen sich durch die Innenstadt. Die Altstadt ist dicht bebaut, Zufahrten über Brücken und schmale Straßen schränken Kranstandorte ein. Am Stadtrand gibt es große Industrieflächen und neue Wohngebiete mit Einfamilienhäusern.",
     stadtteile: ["Bad Waldliesborn", "Cappel", "Lipperode", "Bökenförde", "Eickelborn", "Overhagen", "Hellinghausen"],
     typischeEinsaetze: ["hallenbau", "pool-einheben", "galabau", "wintergarten"],
-    empfohleneGeraete: ["k1003", "mkg-1251", "klaas-k21-30-rs", "scherenbuehne"],
+    empfohleneGeraete: ["k1003", "mkg-1251", "klaas-k21-30-rs", "ruthmann-tbr-260"],
     genehmigung:
       "Für einen Kran auf einer öffentlichen Straße in Lippstadt sind eine Sondernutzungserlaubnis und eine verkehrsrechtliche Anordnung erforderlich. Diese vergeben die zuständigen Stellen der Stadt Lippstadt (in der Regel Straßenverkehrsbehörde bzw. Tiefbauamt). Wir reichen den Antrag ein; das dauert einige Werktage bis wenige Wochen, je nach Lage.",
     nachbarorte: ["Erwitte", "Geseke", "Lippetal", "Wadersloh", "Rietberg"],
@@ -233,7 +233,7 @@ export const staedte: Stadt[] = [
       {
         frage: "Fährt Zeller Kranservice auch nach Lippstadt?",
         antwort:
-          "Ja, Lippstadt liegt in unserem direkten Einsatzgebiet rund um Werl. Wir sind dort regelmäßig mit Autokranen und Arbeitsbühnen im Einsatz. Nach Ihrer Anfrage rufen wir innerhalb von 24 Stunden zurück.",
+          "Ja, Lippstadt liegt in unserem direkten Einsatzgebiet rund um Werl. Wir sind dort regelmäßig mit Autokranen und unserem Hubsteiger im Einsatz. Nach Ihrer Anfrage rufen wir innerhalb von 24 Stunden zurück.",
       },
       {
         frage: "Welcher Kran eignet sich für ein Neubaugebiet in Lippstadt?",
@@ -295,7 +295,7 @@ export const staedte: Stadt[] = [
       "Iserlohn liegt am Nordrand des Sauerlands, viele Straßen sind steil und kurvig. Die Altstadt ist am Hang gebaut und eng bebaut. In Letmathe an der Lenne und in Sümmern gibt es Gewerbeflächen und Wohngebiete mit Einfamilienhäusern.",
     stadtteile: ["Letmathe", "Hennen", "Sümmern", "Kesbern", "Drüpplingsen", "Iserlohnerheide", "Oestrich"],
     typischeEinsaetze: ["dachdecker", "geruestbau", "pool-einheben", "glasmontage"],
-    empfohleneGeraete: ["mkg-1251", "mkg-582", "jekko-spx532", "raupenbuehne"],
+    empfohleneGeraete: ["mkg-1251", "mkg-582", "jekko-spx532", "ruthmann-tbr-260"],
     genehmigung:
       "Für einen Kran auf öffentlichem Straßenraum in Iserlohn braucht es eine Sondernutzungserlaubnis und eine verkehrsrechtliche Anordnung. Diese stellen die zuständigen Stellen der Stadt Iserlohn (in der Regel Straßenverkehrsbehörde bzw. Tiefbauamt) aus. Wir übernehmen den Antrag; einplanen sollten Sie einige Werktage bis wenige Wochen, je nach Lage.",
     nachbarorte: ["Hemer", "Menden", "Schwerte", "Hagen", "Altena"],
@@ -308,7 +308,7 @@ export const staedte: Stadt[] = [
       {
         frage: "Welches Gerät eignet sich für Arbeiten auf unebenem Gelände in Iserlohn?",
         antwort:
-          "Auf Hängen und weichem Boden ist die Raupenbühne Almac B1890 eine gute Wahl, weil sie auf Ketten fährt. Sie erreicht 18 m Arbeitshöhe und passt durch Türen. Für Lasten in schwer erreichbaren Gärten gibt es den Minikran Jekko SPX532. Wir beraten Sie, was zu Ihrem Grundstück passt.",
+          "Auf Hängen und weichem Boden ist der Minikran Jekko SPX532 eine gute Wahl, weil er auf Ketten fährt und durch Türen passt. Er hebt bis 3,2 t, auch in schwer erreichbare Gärten. Wir beraten Sie, was zu Ihrem Grundstück passt.",
       },
       {
         frage: "Wer kümmert sich in Iserlohn um die Genehmigung?",
@@ -325,12 +325,12 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 43.000",
     luftlinieKm: 20,
     intro:
-      "Kran mieten in Kamen: Von Werl aus sind wir über die A2-Anbindung schnell am Kamener Kreuz. Wir liefern Autokrane mit Kranführer für Hallen und Wohnbau sowie Arbeitsbühnen. Besichtigung, Planung und Genehmigung übernehmen wir.",
+      "Kran mieten in Kamen: Von Werl aus sind wir über die A2-Anbindung schnell am Kamener Kreuz. Wir liefern Autokrane mit Kranführer für Hallen und Wohnbau sowie Hubsteiger. Besichtigung, Planung und Genehmigung übernehmen wir.",
     lage:
       "Kamen liegt am Autobahnkreuz von A1 und A2, rundherum sind große Logistik- und Gewerbeflächen entstanden. Die Innenstadt ist kompakt mit dichter Bebauung. In Methler und Heeren-Werve überwiegen Wohngebiete, teils mit alten Zechensiedlungen.",
     stadtteile: ["Kamen-Mitte", "Methler", "Heeren-Werve", "Südkamen", "Westick", "Wasserkurl", "Rottum"],
     typischeEinsaetze: ["hallenbau", "dachdecker", "pool-einheben", "bauschutt"],
-    empfohleneGeraete: ["mkg-1302", "k1003", "k950", "scherenbuehne"],
+    empfohleneGeraete: ["mkg-1302", "k1003", "k950", "ruthmann-tbr-260"],
     genehmigung:
       "Steht der Kran in Kamen auf einer öffentlichen Fläche, braucht es eine Sondernutzungserlaubnis und eine verkehrsrechtliche Anordnung. Erteilt werden sie von den zuständigen Stellen der Stadt Kamen (in der Regel Straßenverkehrsbehörde bzw. Tiefbauamt). Wir stellen den Antrag für Sie; das dauert einige Werktage bis wenige Wochen, je nach Lage.",
     nachbarorte: ["Unna", "Bergkamen", "Bönen", "Lünen", "Dortmund"],
@@ -343,7 +343,7 @@ export const staedte: Stadt[] = [
       {
         frage: "Welcher Kran eignet sich für eine Logistikhalle in Kamen?",
         antwort:
-          "Für Hallenbau setzen wir große Autokrane wie den MKG HMK 1302 oder den Klaas K1003 ein. Sie erreichen über 50 m Hakenhöhe. Für Arbeiten unter dem Hallendach eignet sich die Scherenbühne Almac BIBI 1090 mit 10 m Arbeitshöhe.",
+          "Für Hallenbau setzen wir große Autokrane wie den MKG HMK 1302 oder den Klaas K1003 ein. Sie erreichen über 50 m Hakenhöhe.",
       },
       {
         frage: "Kann der Kran in Kamen beim Abtransport von Bauschutt helfen?",
@@ -360,7 +360,7 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 53.000",
     luftlinieKm: 25,
     intro:
-      "Kran mieten in Ahlen: Zeller Kranservice kommt aus Werl, rund 25 km südlich. Wir stellen Autokrane mit Kranführer, Anhängerkrane auch ohne Bedienung und Arbeitsbühnen. Planung und Genehmigung übernehmen wir.",
+      "Kran mieten in Ahlen: Zeller Kranservice kommt aus Werl, rund 25 km südlich. Wir stellen Autokrane mit Kranführer, Anhängerkrane auch ohne Bedienung und Hubsteiger. Planung und Genehmigung übernehmen wir.",
     lage:
       "Ahlen liegt im flachen südlichen Münsterland an der Werse. Auf dem Gelände der früheren Zeche Westfalen ist ein neues Quartier gewachsen. Wohngebiete mit Einfamilienhäusern und großen Gärten prägen Ortsteile wie Vorhelm und Dolberg.",
     stadtteile: ["Innenstadt", "Dolberg", "Vorhelm", "Tönnishäuschen", "Ahlen-Ost"],
@@ -430,7 +430,7 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 365.000",
     luftlinieKm: 50,
     intro:
-      "Kran mieten in Bochum: Zeller Kranservice fährt von Werl aus über die A44 und A40 ins Bochumer Stadtgebiet. Wir stellen Autokrane bis 53 m Hakenhöhe mit Kranführer, Minikrane und Arbeitsbühnen. Besichtigung, Planung und Genehmigung übernehmen wir.",
+      "Kran mieten in Bochum: Zeller Kranservice fährt von Werl aus über die A44 und A40 ins Bochumer Stadtgebiet. Wir stellen Autokrane bis 53 m Hakenhöhe mit Kranführer, Minikrane und Hubsteiger. Besichtigung, Planung und Genehmigung übernehmen wir.",
     lage:
       "In Ehrenfeld und rund um die Innenstadt stehen viele Altbauten mit Hinterhöfen und knappen Parkflächen. Typisch für Bochum sind auch Zechensiedlungen mit niedrigen Häusern und Gärten. Auf früheren Industrieflächen entstehen neue Gewerbe- und Wohnquartiere.",
     stadtteile: ["Wattenscheid", "Langendreer", "Ehrenfeld", "Weitmar", "Stiepel", "Querenburg", "Riemke", "Gerthe"],
@@ -505,7 +505,7 @@ export const staedte: Stadt[] = [
       "Der Teutoburger Wald teilt Bielefeld, viele Grundstücke liegen deshalb am Hang. Rund um die Altstadt unterhalb der Sparrenburg ist die Bebauung dicht. Sennestadt wurde nach dem Krieg als geplante Stadt angelegt, dazu kommen große Gewerbegebiete.",
     stadtteile: ["Mitte", "Brackwede", "Sennestadt", "Schildesche", "Heepen", "Jöllenbeck", "Gadderbaum", "Sieker"],
     typischeEinsaetze: ["dachdecker", "zimmerei", "hallenbau", "wintergarten"],
-    empfohleneGeraete: ["k1003", "k950", "jekko-spx532", "raupenbuehne"],
+    empfohleneGeraete: ["k1003", "k950", "jekko-spx532", "ruthmann-tbr-260"],
     genehmigung:
       "Braucht der Kran in Bielefeld öffentliche Straßenfläche, sind eine Sondernutzungserlaubnis und eine verkehrsrechtliche Anordnung Pflicht. Zuständig sind die Stellen der Stadt Bielefeld (in der Regel Straßenverkehrsbehörde bzw. Tiefbauamt). Wir stellen den Antrag für Sie; das dauert einige Werktage bis wenige Wochen, je nach Lage.",
     nachbarorte: ["Gütersloh", "Herford", "Bad Salzuflen", "Oerlinghausen", "Halle (Westf.)"],
@@ -518,7 +518,7 @@ export const staedte: Stadt[] = [
       {
         frage: "Welcher Kran eignet sich für eine Hanglage am Teutoburger Wald?",
         antwort:
-          "Ein wendiger Kran wie der Klaas K950 kommt auch durch kurvige Wohnstraßen. Für steiles Gelände ohne Zufahrt eignen sich Minikran oder Raupenbühne. Wir sehen uns die Stellfläche vorher an.",
+          "Ein wendiger Kran wie der Klaas K950 kommt auch durch kurvige Wohnstraßen. Für steiles Gelände ohne Zufahrt eignet sich unser Minikran. Wir sehen uns die Stellfläche vorher an.",
       },
       {
         frage: "Wer kümmert sich in Bielefeld um die Genehmigung?",
@@ -572,7 +572,7 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 1,9 Mio.",
     luftlinieKm: 265,
     intro:
-      "Kran mieten in Hamburg: Zeller Kranservice kommt aus Werl und plant die Anreise in den Norden als Teil des Auftrags. Das eignet sich vor allem für geplante Projekte mit festem Termin. Wir bringen Autokrane mit Kranführer, Minikrane und Arbeitsbühnen mit.",
+      "Kran mieten in Hamburg: Zeller Kranservice kommt aus Werl und plant die Anreise in den Norden als Teil des Auftrags. Das eignet sich vor allem für geplante Projekte mit festem Termin. Wir bringen Autokrane mit Kranführer, Minikrane und Hubsteiger mit.",
     lage:
       "Hamburg ist von Wasser geprägt: Alster, Elbe, Kanäle und Fleete begrenzen oft die Stellflächen. In Eimsbüttel, Winterhude und Altona stehen viele Altbauten mit engen Straßen. Am Elbhang in Blankenese liegen Häuser steil am Hang, teils nur über Treppen erreichbar.",
     stadtteile: ["Altona", "Eimsbüttel", "Winterhude", "Wandsbek", "Harburg", "Bergedorf", "HafenCity", "Blankenese"],
@@ -747,12 +747,12 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 630.000",
     luftlinieKm: 320,
     intro:
-      "Kran mieten in Stuttgart ist mit Zeller Kranservice für geplante Projekte möglich. Wir kommen aus Werl in NRW und planen die Anreise als Teil des Auftrags. Mit dabei sind Autokrane mit Kranführer, Minikrane und Raupenbühnen für Hanglagen.",
+      "Kran mieten in Stuttgart ist mit Zeller Kranservice für geplante Projekte möglich. Wir kommen aus Werl in NRW und planen die Anreise als Teil des Auftrags. Mit dabei sind Autokrane mit Kranführer, Minikrane für Hanglagen und unser Hubsteiger.",
     lage:
       "Stuttgart liegt in einem Talkessel, viele Wohngebiete ziehen sich steil die Hänge hinauf. Straßen sind dort oft schmal und kurvig, manche Häuser nur über Treppen, die Stäffele, erreichbar. Im Tal und in Bad Cannstatt ist die Bebauung dicht.",
     stadtteile: ["Stuttgart-Mitte", "Stuttgart-West", "Bad Cannstatt", "Degerloch", "Vaihingen", "Feuerbach", "Zuffenhausen", "Möhringen"],
     typischeEinsaetze: ["dachdecker", "pool-einheben", "glasmontage", "zimmerei"],
-    empfohleneGeraete: ["k950", "mkg-582", "jekko-spx532", "raupenbuehne"],
+    empfohleneGeraete: ["k950", "mkg-582", "jekko-spx532", "ruthmann-tbr-260"],
     genehmigung:
       "Steht der Kran in Stuttgart auf öffentlichem Grund, braucht es eine Sondernutzungserlaubnis und eine verkehrsrechtliche Anordnung. Diese vergeben die zuständigen Stellen der Stadt Stuttgart (in der Regel Straßenverkehrsbehörde bzw. Tiefbauamt). Wir übernehmen den Antrag; planen Sie einige Werktage bis wenige Wochen ein, je nach Lage.",
     nachbarorte: ["Esslingen am Neckar", "Ludwigsburg", "Fellbach", "Leinfelden-Echterdingen", "Böblingen"],
@@ -765,7 +765,7 @@ export const staedte: Stadt[] = [
       {
         frage: "Welcher Kran eignet sich für eine Stuttgarter Halbhöhenlage?",
         antwort:
-          "Auf schmalen, steilen Straßen ist ein wendiger Kran wie der Klaas K950 oder der kompakte MKG 582 sinnvoll. Ist das Grundstück nur zu Fuß erreichbar, kommen Minikran oder die Raupenbühne Almac B1890 zum Einsatz, die durch Türen passt. Wir prüfen die Stellfläche vorab.",
+          "Auf schmalen, steilen Straßen ist ein wendiger Kran wie der Klaas K950 oder der kompakte MKG 582 sinnvoll. Ist das Grundstück nur zu Fuß erreichbar, kommt unser Minikran zum Einsatz, der durch Türen passt. Wir prüfen die Stellfläche vorab.",
       },
       {
         frage: "Wer kümmert sich in Stuttgart um die Genehmigung?",
@@ -782,7 +782,7 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 620.000",
     luftlinieKm: 310,
     intro:
-      "Kran mieten in Leipzig: Zeller Kranservice kommt aus Werl und plant die Anreise nach Sachsen als Teil des Auftrags. Das eignet sich besonders für geplante Sanierungs- und Bauprojekte. Wir bringen Autokrane mit Kranführer, Minikrane und Arbeitsbühnen mit.",
+      "Kran mieten in Leipzig: Zeller Kranservice kommt aus Werl und plant die Anreise nach Sachsen als Teil des Auftrags. Das eignet sich besonders für geplante Sanierungs- und Bauprojekte. Wir bringen Autokrane mit Kranführer, Minikrane und Hubsteiger mit.",
     lage:
       "Leipzig hat einen großen Bestand an Gründerzeit-Altbauten, etwa in Gohlis, Connewitz und Schleußig. Viele Häuser werden saniert, Dachgeschosse ausgebaut und Fenster getauscht. In Plagwitz und Lindenau entstehen in früheren Fabrikgebäuden Lofts und Wohnungen.",
     stadtteile: ["Zentrum", "Gohlis", "Connewitz", "Schleußig", "Plagwitz", "Lindenau", "Reudnitz", "Grünau"],
@@ -887,12 +887,12 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 545.000",
     luftlinieKm: 155,
     intro:
-      "Kran mieten in Hannover: Zeller Kranservice kommt aus Werl und plant die Anreise als Teil des Auftrags. Das eignet sich vor allem für Projekte mit festem Termin. Wir bringen Autokrane mit Kranführer, Minikrane und Arbeitsbühnen mit.",
+      "Kran mieten in Hannover: Zeller Kranservice kommt aus Werl und plant die Anreise als Teil des Auftrags. Das eignet sich vor allem für Projekte mit festem Termin. Wir bringen Autokrane mit Kranführer, Minikrane und Hubsteiger mit.",
     lage:
       "In der List, in der Südstadt und in Linden stehen viele Altbauten mit Hinterhöfen und knappen Parkflächen. Linden hat zudem frühere Industriebauten, die heute anders genutzt werden. Am Stadtrand, etwa in Bothfeld, überwiegen Einfamilienhäuser mit Gärten.",
     stadtteile: ["Mitte", "List", "Linden", "Südstadt", "Kleefeld", "Döhren", "Bothfeld", "Herrenhausen"],
     typischeEinsaetze: ["dachdecker", "pool-einheben", "hallenbau", "glasmontage"],
-    empfohleneGeraete: ["mkg-1302", "mkg-1251", "jekko-spx532", "scherenbuehne"],
+    empfohleneGeraete: ["mkg-1302", "mkg-1251", "jekko-spx532", "ruthmann-tbr-260"],
     genehmigung:
       "Steht der Kran in Hannover auf öffentlichem Straßenraum, braucht es eine Sondernutzungserlaubnis und eine verkehrsrechtliche Anordnung. Erteilt werden sie von den zuständigen Stellen der Stadt Hannover (in der Regel Straßenverkehrsbehörde bzw. Tiefbauamt). Wir stellen den Antrag; je nach Lage dauert es einige Werktage bis wenige Wochen.",
     nachbarorte: ["Langenhagen", "Garbsen", "Laatzen", "Hemmingen", "Seelze"],
@@ -957,12 +957,12 @@ export const staedte: Stadt[] = [
     einwohner: "ca. 500.000",
     luftlinieKm: 80,
     intro:
-      "Kran mieten in Duisburg: Zeller Kranservice kommt aus dem rund 80 km entfernten Werl und plant die Anfahrt mit ein. Wir stellen Autokrane bis 53 m Hakenhöhe mit Kranführer, Minikrane und Arbeitsbühnen. Genehmigungen in Duisburg beantragen wir für Sie.",
+      "Kran mieten in Duisburg: Zeller Kranservice kommt aus dem rund 80 km entfernten Werl und plant die Anfahrt mit ein. Wir stellen Autokrane bis 53 m Hakenhöhe mit Kranführer, Minikrane und Hubsteiger. Genehmigungen in Duisburg beantragen wir für Sie.",
     lage:
       "Duisburg liegt an Rhein und Ruhr, rund um Ruhrort prägen Hafen und Logistik die Stadt. Im Norden gibt es große Industrie- und Stahlstandorte mit Hallen. Dazu kommen Zechensiedlungen und dichte Altbauviertel, etwa in Neudorf und Duissern.",
     stadtteile: ["Ruhrort", "Homberg", "Rheinhausen", "Hamborn", "Marxloh", "Neudorf", "Duissern", "Walsum"],
     typischeEinsaetze: ["hallenbau", "dachdecker", "geruestbau", "bauschutt"],
-    empfohleneGeraete: ["mkg-1302", "k1003", "jekko-spx532", "scherenbuehne"],
+    empfohleneGeraete: ["mkg-1302", "k1003", "jekko-spx532", "ruthmann-tbr-260"],
     genehmigung:
       "Braucht der Kran in Duisburg öffentlichen Straßenraum, sind eine Sondernutzungserlaubnis und eine verkehrsrechtliche Anordnung erforderlich. Diese stellen die zuständigen Stellen der Stadt Duisburg (in der Regel Straßenverkehrsbehörde bzw. Tiefbauamt) aus. Wir übernehmen den Antrag; planen Sie einige Werktage bis wenige Wochen ein, je nach Lage.",
     nachbarorte: ["Oberhausen", "Mülheim an der Ruhr", "Moers", "Krefeld", "Dinslaken"],
@@ -975,7 +975,7 @@ export const staedte: Stadt[] = [
       {
         frage: "Welcher Kran eignet sich für Hallenarbeiten in Duisburg?",
         antwort:
-          "Für Dachelemente und Stahlteile setzen wir große Autokrane wie den MKG HMK 1302 oder den Klaas K1003 ein. Für Arbeiten unter dem Hallendach eignet sich die Scherenbühne Almac BIBI 1090 mit 10 m Arbeitshöhe. Die Auswahl treffen wir nach Gewicht und Ausladung.",
+          "Für Dachelemente und Stahlteile setzen wir große Autokrane wie den MKG HMK 1302 oder den Klaas K1003 ein. Die Auswahl treffen wir nach Gewicht und Ausladung.",
       },
       {
         frage: "Wer kümmert sich in Duisburg um die Genehmigung?",

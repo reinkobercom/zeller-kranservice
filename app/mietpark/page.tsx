@@ -12,7 +12,7 @@ import { anfrageUrl, geraetUrl } from "@/lib/links";
 export const metadata: Metadata = {
   title: "Mietpark: alle Krane und Bühnen im Vergleich | Zeller Kranservice",
   description:
-    "Alle Mietgeräte von Zeller Kranservice im Überblick: 6 Autokrane bis 53 m, 12 Anhängerkrane, Minikran, Hubsteiger, Raupen- und Scherenbühne, Glashebegerät. Mit Filter und Vergleich.",
+    "Alle Mietgeräte von Zeller Kranservice im Überblick: 6 Autokrane bis 53 m, 12 Anhängerkrane, Minikran, Hubsteiger, Glashebegerät. Mit Filter und Vergleich.",
   alternates: { canonical: "/mietpark/" },
 };
 
@@ -20,7 +20,7 @@ const ENTSCHEIDUNG = [
   { frage: "Wenig Platz oder Arbeiten im Gebäude?", antwort: "Minikran oder Glashebegerät", kat: "minikran" as const },
   { frage: "Material aufs Dach, mehrere Tage?", antwort: "Anhängerkran, auch ohne Fahrer", kat: "anhaengerkran" as const },
   { frage: "Schwere Lasten, große Höhe oder über ein Haus?", antwort: "Autokran", kat: "autokran" as const },
-  { frage: "Menschen in die Höhe bringen, kein Gerüst?", antwort: "Hubsteiger oder Arbeitsbühne", kat: "hubsteiger" as const },
+  { frage: "Menschen in die Höhe bringen, kein Gerüst?", antwort: "Hubsteiger", kat: "hubsteiger" as const },
 ];
 
 export default function MietparkPage() {

@@ -168,41 +168,6 @@ export const kategorien: Kategorie[] = [
     bild: IMG.hubsteiger,
   },
   {
-    slug: "arbeitsbuehne",
-    urlSlug: "arbeitsbuehne-mieten",
-    name: "Arbeitsbühne",
-    plural: "Arbeitsbühnen",
-    kurz: "Raupen- und Scherenbühnen für drinnen und draußen",
-    kennzahl: "Raupe & Schere",
-    metaTitle: "Arbeitsbühne mieten: Raupen- & Scherenbühne | Zeller",
-    metaDescription:
-      "Arbeitsbühne mieten bei Zeller Kranservice: Raupenbühne für unwegsames Gelände und Innenräume, Scherenbühne für Hallen. Mit Beratung und Lieferung.",
-    h1: "Arbeitsbühne mieten",
-    intro:
-      "Neben Kranen vermieten wir Raupenbühnen und Scherenbühnen. Die Raupenbühne fährt durch Türen und über unebenen Boden, etwa in Kirchen oder Gärten. Die Scherenbühne bringt Sie in Hallen sicher unter die Decke.",
-    wannSinnvoll: [
-      "Arbeiten in Kirchen, Foyers und Hallen mit empfindlichem Boden",
-      "Gelände ohne feste Zufahrt, Hanglagen und Gärten",
-      "Montage an Hallendecken, Beleuchtung und Lüftung",
-      "Wartung in Produktion und Lager",
-    ],
-    mitFahrer:
-      "Wir beraten Sie, welche Bühne passt, und klären mit Ihnen, ob Sie selbst bedienen oder einen Bediener brauchen.",
-    faq: [
-      {
-        frage: "Was ist der Unterschied zwischen Raupen- und Scherenbühne?",
-        antwort:
-          "Die Raupenbühne hat einen Gelenkarm und ein Raupenfahrwerk. Sie fährt durch Türen und über unebenen Boden. Die Scherenbühne hebt senkrecht und bietet eine große Plattform für Arbeiten an Decken.",
-      },
-      {
-        frage: "Kann eine Arbeitsbühne in Gebäuden eingesetzt werden?",
-        antwort:
-          "Ja. Unsere Raupenbühne war zum Beispiel schon in einer Kirche im Einsatz. Wir prüfen vorab Türbreiten und Bodenbelastung.",
-      },
-    ],
-    bild: IMG.raupenbuehneKirche,
-  },
-  {
     slug: "glashebegeraet",
     urlSlug: "glashebegeraet-mieten",
     name: "Glashebegerät",
